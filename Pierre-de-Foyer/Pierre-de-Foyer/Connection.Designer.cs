@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Connection));
             this.btnConnection = new System.Windows.Forms.Button();
             this.btnQuit = new System.Windows.Forms.Button();
             this.lblUsername = new System.Windows.Forms.Label();
@@ -99,6 +100,7 @@
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.btnConnection);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Connection";
             this.Text = "Pierre-de-Foyer";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
