@@ -9,3 +9,5 @@ C:\Users\LoisonYo\Desktop\PDF\Pierre-de-Foyer\Pierre-de-Foyer\obj\Debug\Pierre_d
 C:\Users\LoisonYo\Desktop\PDF\Pierre-de-Foyer\Pierre-de-Foyer\obj\Debug\Pierre-de-Foyer.csproj.GenerateResource.Cache
 C:\Users\LoisonYo\Desktop\PDF\Pierre-de-Foyer\Pierre-de-Foyer\obj\Debug\Pierre-de-Foyer.exe
 C:\Users\LoisonYo\Desktop\PDF\Pierre-de-Foyer\Pierre-de-Foyer\obj\Debug\Pierre-de-Foyer.pdb
+C:\Users\LoisonYo\Desktop\PDF\Pierre-de-Foyer\Pierre-de-Foyer\obj\Debug\Pierre_de_Foyer.Menu.resources
+C:\Users\LoisonYo\Desktop\PDF\Pierre-de-Foyer\Pierre-de-Foyer\obj\Debug\Pierre_de_Foyer.Plateau.resources
