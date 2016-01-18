@@ -47,6 +47,8 @@
     <Compile Include="Classes\Carte.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Classes\Hero.cs" />
+    <Compile Include="Classes\PouvoirHeroique.cs" />
     <Compile Include="Connection.cs">
       <SubType>Form</SubType>
     </Compile>
