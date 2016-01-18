@@ -1,2 +1,5 @@
-Geronimo;Kawaii
-Sacha;Ogre
+Yohann;Loison
+Sacha;Knoepfel
+Vincent;Moulin
+Hugo;Jeanneret
+Janis;Chiffel
