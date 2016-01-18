@@ -31,7 +31,11 @@ namespace Pierre_de_Foyer
         {
             if(VerifieIdentifiant() == true)
             {
+                Form connection = new Connection();
                 Form menu = new Menu();
+                menu.Show();
+                connection.Visible = false;
+                
             }
             else
             {
