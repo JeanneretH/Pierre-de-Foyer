@@ -16,5 +16,15 @@ namespace Pierre_de_Foyer
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Permet à l'utilisateur de quitter le programme
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnQuitter_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

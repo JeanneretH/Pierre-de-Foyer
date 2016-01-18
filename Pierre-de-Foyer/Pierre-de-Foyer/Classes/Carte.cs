@@ -34,6 +34,39 @@ namespace Pierre_de_Foyer
             //this.Image = pr
         }
 
+        public int getId()
+        {
+            return iId;
+        }
+
+        public int getMana()
+        {
+            return iMana;
+        }
+
+        public string getDescription()
+        {
+            return strDescription;
+        }
+
+        public string getHeros()
+        {
+            return strHeros;
+        }
+
+        public string getNom()
+        {
+            return strNom;
+        }
+
+        public bool getAttaquable()
+        {
+            return bAttaquable;
+        }
+
+
+
+
         /// <summary>
         /// Permettra de jouer la carte
         /// </summary>
