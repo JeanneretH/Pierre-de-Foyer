@@ -2,4 +2,4 @@
 Jeu de carte mis au point par une classe du CPLN.
   
 /!\/!\/!\/!\/!\
-Pour travailler correctement => Wiki/Travailler
+Pour travailler correctement (Conflits) => Wiki/Travailler
