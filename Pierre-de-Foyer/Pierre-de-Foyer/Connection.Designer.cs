@@ -93,13 +93,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(390, 375);
+            this.ClientSize = new System.Drawing.Size(698, 606);
             this.Controls.Add(this.tbxPass);
             this.Controls.Add(this.tbxUsername);
             this.Controls.Add(this.lblPass);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.btnConnection);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Connection";
             this.Text = "Pierre-de-Foyer";
