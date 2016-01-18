@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Pierre_de_Foyer
 {
@@ -29,9 +30,11 @@ namespace Pierre_de_Foyer
         /// <param name="e"></param>
         private void btnConnection_Click(object sender, EventArgs e)
         {
-            if(VerifieIdentifiant() == true)
+            if(VerifieIdentifiant())
             {
                 Form menu = new Menu();
+                menu.Show();
+                this.Visible = false;
             }
             else
             {
@@ -40,12 +43,25 @@ namespace Pierre_de_Foyer
         }
 
         /// <summary>
-        /// Vérifie si les identifiants rentré sont inclu dans les compte.
+        /// Vérifie si les identifiants rentré sont inclu dans les comptes enregistré dans le text.
         /// </summary>
         /// <returns>Retourn true si les identifiants sont correcte</returns>
         private bool VerifieIdentifiant()
         {
-            return true;
+            string strCompte = tbxUsername.Text + ";" + tbxPass.Text;
+
+            using (StreamReader sr = File.OpenText("Compte.txt"))
+            {
+                string strTxt;
+                while((strTxt = sr.ReadLine()) != null)
+                {
+                    if(strTxt == strCompte)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
         }
 
         /// <summary>
