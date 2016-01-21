@@ -20,6 +20,10 @@ namespace Pierre_de_Foyer
 
         private void Connection_Load(object sender, EventArgs e)
         {
+            //Initialisation
+            tbxUsername.Text = "Prenom";
+            tbxPass.Text = "Nom";
+
             //Placement des objets
             btnConnection.Location = new Point(this.Width / 2 - btnConnection.Width / 2, this.Height / 2 - btnConnection.Height);
             btnQuitter.Location = new Point(btnConnection.Location.X, btnConnection.Location.Y + btnConnection.Height + 6);
@@ -32,8 +36,6 @@ namespace Pierre_de_Foyer
         /// <summary>
         /// Permet a l'utilisateur de rentrer dans le menu si le test d'identifiant est correcte.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void btnConnection_Click(object sender, EventArgs e)
         {
             if(VerifieIdentifiant())
@@ -73,8 +75,6 @@ namespace Pierre_de_Foyer
         /// <summary>
         /// Permet à l'utilisateur de quitter le programme
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void btnQuitter_Click(object sender, EventArgs e)
         {
             Application.Exit();

@@ -29,7 +29,7 @@ namespace Pierre_de_Foyer
             pbxPouvoirHero.BackColor = Color.Yellow;
             pbxPouvoirHeroAdverse.BackColor = Color.Yellow;
 
-            //Placement des objet
+            //Placement des objets
             pbxHero.Location = new Point(this.Width / 2 - pbxHero.Width / 2, this.Height - pbxHeroAdverse.Height);
             pbxHeroAdverse.Location = new Point(this.Width / 2 - pbxHeroAdverse.Width / 2, 0);
             pbxPouvoirHero.Location = new Point(this.Width / 2 + pbxHero.Width / 2, this.Height - pbxPouvoirHero.Height);
@@ -38,22 +38,34 @@ namespace Pierre_de_Foyer
             btnRetour.Location = new Point(this.Width - btnRetour.Width, 0);
         }
 
+        /// <summary>
+        /// Appelle cette fonction lorsque le joueur utilise sont pouvoir heroique
+        /// </summary>
         private void pbxPouvoirHero_Click(object sender, EventArgs e)
         {
             //hero.getPouvoirHeroique();
         }
 
+        /// <summary>
+        /// Appelle cette fonction lorsque le joueur adverse utilise sont pouvoir heroique
+        /// </summary>
         private void pbxPouvoirHeroAdverse_Click(object sender, EventArgs e)
         {
             //heroAdverse.getPouvoirHeroique();
         }
 
+        /// <summary>
+        /// Appelle cette fonction lorsque le joueur passe sont tour
+        /// </summary>
         private void btnPasser_Click(object sender, EventArgs e)
         {
             //hero.PiocherCartes();
             //heroAdverse.PiocherCartes();
         }
 
+        /// <summary>
+        /// Quitte le plateau de jeu
+        /// </summary>
         private void btnRetour_Click(object sender, EventArgs e)
         {
             Form menu = new Menu();
