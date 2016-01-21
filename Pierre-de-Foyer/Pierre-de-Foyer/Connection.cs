@@ -18,11 +18,6 @@ namespace Pierre_de_Foyer
             InitializeComponent();
         }
 
-        private void Connection_Load(object sender, EventArgs e)
-        {
-
-        }
-
         /// <summary>
         /// Permet a l'utilisateur de rentrer dans le menu si le test d'identifiant est correcte.
         /// </summary>

@@ -105,7 +105,6 @@
             this.Name = "Connection";
             this.Text = "Pierre-de-Foyer";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Connection_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

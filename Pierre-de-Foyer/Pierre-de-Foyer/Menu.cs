@@ -26,5 +26,17 @@ namespace Pierre_de_Foyer
         {
             Application.Exit();
         }
+
+        /// <summary>
+        /// Affiche le plateau (Temporaire)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnJouer_Click(object sender, EventArgs e)
+        {
+            Form plateau = new Plateau();
+            plateau.Show();
+            this.Visible = false;
+        }
     }
 }
