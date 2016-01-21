@@ -106,6 +106,7 @@
             this.Controls.Add(this.pbxPouvoirHero);
             this.Controls.Add(this.pbxHeroAdverse);
             this.Controls.Add(this.pbxHero);
+            this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Plateau";
