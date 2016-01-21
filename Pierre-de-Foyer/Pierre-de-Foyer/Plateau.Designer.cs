@@ -33,6 +33,8 @@
             this.pbxHeroAdverse = new System.Windows.Forms.PictureBox();
             this.pbxPouvoirHero = new System.Windows.Forms.PictureBox();
             this.pbxPouvoirHeroAdverse = new System.Windows.Forms.PictureBox();
+            this.btnPasser = new System.Windows.Forms.Button();
+            this.btnRetour = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxHero)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxHeroAdverse)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPouvoirHero)).BeginInit();
@@ -62,6 +64,7 @@
             this.pbxPouvoirHero.Size = new System.Drawing.Size(50, 50);
             this.pbxPouvoirHero.TabIndex = 2;
             this.pbxPouvoirHero.TabStop = false;
+            this.pbxPouvoirHero.Click += new System.EventHandler(this.pbxPouvoirHero_Click);
             // 
             // pbxPouvoirHeroAdverse
             // 
@@ -70,12 +73,35 @@
             this.pbxPouvoirHeroAdverse.Size = new System.Drawing.Size(50, 50);
             this.pbxPouvoirHeroAdverse.TabIndex = 3;
             this.pbxPouvoirHeroAdverse.TabStop = false;
+            this.pbxPouvoirHeroAdverse.Click += new System.EventHandler(this.pbxPouvoirHeroAdverse_Click);
+            // 
+            // btnPasser
+            // 
+            this.btnPasser.Location = new System.Drawing.Point(168, 124);
+            this.btnPasser.Name = "btnPasser";
+            this.btnPasser.Size = new System.Drawing.Size(118, 38);
+            this.btnPasser.TabIndex = 4;
+            this.btnPasser.Text = "Passer";
+            this.btnPasser.UseVisualStyleBackColor = true;
+            this.btnPasser.Click += new System.EventHandler(this.btnPasser_Click);
+            // 
+            // btnRetour
+            // 
+            this.btnRetour.Location = new System.Drawing.Point(168, 168);
+            this.btnRetour.Name = "btnRetour";
+            this.btnRetour.Size = new System.Drawing.Size(75, 23);
+            this.btnRetour.TabIndex = 5;
+            this.btnRetour.Text = "Retour";
+            this.btnRetour.UseVisualStyleBackColor = true;
+            this.btnRetour.Click += new System.EventHandler(this.btnRetour_Click);
             // 
             // Plateau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1353, 718);
+            this.Controls.Add(this.btnRetour);
+            this.Controls.Add(this.btnPasser);
             this.Controls.Add(this.pbxPouvoirHeroAdverse);
             this.Controls.Add(this.pbxPouvoirHero);
             this.Controls.Add(this.pbxHeroAdverse);
@@ -100,5 +126,7 @@
         private System.Windows.Forms.PictureBox pbxHeroAdverse;
         private System.Windows.Forms.PictureBox pbxPouvoirHero;
         private System.Windows.Forms.PictureBox pbxPouvoirHeroAdverse;
+        private System.Windows.Forms.Button btnPasser;
+        private System.Windows.Forms.Button btnRetour;
     }
 }

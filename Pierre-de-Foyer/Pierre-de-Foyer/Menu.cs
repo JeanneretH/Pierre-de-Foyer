@@ -36,7 +36,7 @@ namespace Pierre_de_Foyer
         {
             Form plateau = new Plateau();
             plateau.Show();
-            this.Visible = false;
+            this.Close();
         }
     }
 }
