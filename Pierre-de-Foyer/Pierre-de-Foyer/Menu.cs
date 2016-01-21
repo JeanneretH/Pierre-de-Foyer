@@ -17,17 +17,21 @@ namespace Pierre_de_Foyer
             InitializeComponent();
         }
 
-        /// <summary>
-        /// Permet à l'utilisateur de quitter le programme
-        /// </summary>
+        private void Menu_Load(object sender, EventArgs e)
+        {
+            //Deplacement des objets
+            btnJouer.Location = new Point(this.Width / 2 - btnJouer.Width / 2 , this.Height / 2 - btnJouer.Height / 2);
+            btnDeck.Location = new Point(btnJouer.Location.X , btnJouer.Location.Y - btnDeck.Height - 6);
+            btnQuitter.Location = new Point(btnJouer.Location.X , btnJouer.Location.Y + btnJouer.Height + 6);
+        }
+
+        // Permet à l'utilisateur de quitter le programme
         private void btnQuitter_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        /// <summary>
-        /// Affiche le plateau (Temporaire)
-        /// </summary>
+        // Affiche le plateau (Temporaire)
         private void btnJouer_Click(object sender, EventArgs e)
         {
             Form plateau = new Plateau();
