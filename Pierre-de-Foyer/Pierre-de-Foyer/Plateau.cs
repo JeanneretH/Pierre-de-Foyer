@@ -50,7 +50,8 @@ namespace Pierre_de_Foyer
 
         private void btnPasser_Click(object sender, EventArgs e)
         {
-            
+            //hero.PiocherCartes();
+            //heroAdverse.PiocherCartes();
         }
 
         private void btnRetour_Click(object sender, EventArgs e)
