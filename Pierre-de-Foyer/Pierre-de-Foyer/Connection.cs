@@ -18,6 +18,17 @@ namespace Pierre_de_Foyer
             InitializeComponent();
         }
 
+        private void Connection_Load(object sender, EventArgs e)
+        {
+            //Placement des objets
+            btnConnection.Location = new Point(this.Width / 2 - btnConnection.Width / 2, this.Height / 2 - btnConnection.Height);
+            btnQuitter.Location = new Point(btnConnection.Location.X, btnConnection.Location.Y + btnConnection.Height + 6);
+            tbxPass.Location = new Point(btnConnection.Location.X, btnConnection.Location.Y - tbxPass.Height - 6);
+            lblPass.Location = new Point(tbxPass.Location.X, tbxPass.Location.Y - lblPass.Height - 2);
+            tbxUsername.Location = new Point(lblPass.Location.X, lblPass.Location.Y - tbxUsername.Height - 6);
+            lblUsername.Location = new Point(tbxUsername.Location.X, tbxUsername.Location.Y - lblUsername.Height - 2);
+        }
+
         /// <summary>
         /// Permet a l'utilisateur de rentrer dans le menu si le test d'identifiant est correcte.
         /// </summary>
@@ -64,7 +75,7 @@ namespace Pierre_de_Foyer
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void btnQuitter_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
