@@ -112,6 +112,7 @@
             this.Text = "Plateau";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Plateau_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Plateau_Paint);
             ((System.ComponentModel.ISupportInitialize)(this.pbxHero)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxHeroAdverse)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPouvoirHero)).EndInit();

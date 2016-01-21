@@ -20,6 +20,8 @@ namespace Pierre_de_Foyer
         //Initialisation
         Classes.Hero hero = new Classes.Hero();
         Classes.Hero heroAdverse = new Classes.Hero();
+        Carte[] MainHero = new Carte[12];
+        Carte[] MainHeroAdverce = new Carte[12];
 
         private void Plateau_Load(object sender, EventArgs e)
         {
@@ -38,34 +40,33 @@ namespace Pierre_de_Foyer
             btnRetour.Location = new Point(this.Width - btnRetour.Width, 0);
         }
 
-        /// <summary>
-        /// Appelle cette fonction lorsque le joueur utilise sont pouvoir heroique
-        /// </summary>
+        private void Plateau_Paint(object sender, PaintEventArgs e)
+        {
+            //Dessine le trait de séparation du plateau
+            Pen pen = new Pen(Color.Black, 3);
+            e.Graphics.DrawLine(pen, 0, this.Height / 2, this.Width, this.Height / 2);
+        }
+
+        // Appelle cette fonction lorsque le joueur utilise sont pouvoir heroique
         private void pbxPouvoirHero_Click(object sender, EventArgs e)
         {
             //hero.getPouvoirHeroique();
         }
 
-        /// <summary>
-        /// Appelle cette fonction lorsque le joueur adverse utilise sont pouvoir heroique
-        /// </summary>
+        // Appelle cette fonction lorsque le joueur adverse utilise sont pouvoir heroique
         private void pbxPouvoirHeroAdverse_Click(object sender, EventArgs e)
         {
             //heroAdverse.getPouvoirHeroique();
         }
 
-        /// <summary>
-        /// Appelle cette fonction lorsque le joueur passe sont tour
-        /// </summary>
+        // Appelle cette fonction lorsque le joueur passe sont tour
         private void btnPasser_Click(object sender, EventArgs e)
         {
             //hero.PiocherCartes();
             //heroAdverse.PiocherCartes();
         }
 
-        /// <summary>
-        /// Quitte le plateau de jeu
-        /// </summary>
+        // Quitte le plateau de jeu
         private void btnRetour_Click(object sender, EventArgs e)
         {
             Form menu = new Menu();
