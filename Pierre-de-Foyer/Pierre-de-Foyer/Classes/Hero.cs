@@ -76,11 +76,6 @@ namespace Pierre_de_Foyer.Classes
             PrendreDesDegats(hero.iAttaque);//on spécifie en paramétre l'attaque du hero passé en paramétre
         }
 
-        public PouvoirHeroique getPouvoirHeroique()
-        {
-            return this._pouvoirHeroique;
-        }
-
         /// <summary>
         /// Permet au hero de piocher une carte
         /// </summary>
