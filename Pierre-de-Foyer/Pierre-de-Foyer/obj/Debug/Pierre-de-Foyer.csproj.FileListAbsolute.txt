@@ -46,3 +46,14 @@ E:\Documents\GitHub\Pierre-de-Foyer\Pierre-de-Foyer\Pierre-de-Foyer\obj\Debug\Pi
 E:\Documents\GitHub\Pierre-de-Foyer\Pierre-de-Foyer\Pierre-de-Foyer\obj\Debug\Pierre_de_Foyer.Properties.Resources.resources
 E:\Documents\GitHub\Pierre-de-Foyer\Pierre-de-Foyer\Pierre-de-Foyer\obj\Debug\Pierre-de-Foyer.csproj.GenerateResource.Cache
 E:\Documents\GitHub\Pierre-de-Foyer\Pierre-de-Foyer\Pierre-de-Foyer\obj\Debug\Pierre_de_Foyer.Plateau.resources
+C:\Temp\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\bin\Debug\Pierre-de-Foyer.exe.config
+C:\Temp\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\obj\Debug\Pierre-de-Foyer.exe
+C:\Temp\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\obj\Debug\Pierre-de-Foyer.pdb
+C:\Temp\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\bin\Debug\Pierre-de-Foyer.exe
+C:\Temp\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\bin\Debug\Pierre-de-Foyer.pdb
+C:\Temp\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\obj\Debug\Pierre-de-Foyer.csprojResolveAssemblyReference.cache
+C:\Temp\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\obj\Debug\Pierre_de_Foyer.Connection.resources
+C:\Temp\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\obj\Debug\Pierre_de_Foyer.Menu.resources
+C:\Temp\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\obj\Debug\Pierre_de_Foyer.Plateau.resources
+C:\Temp\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\obj\Debug\Pierre_de_Foyer.Properties.Resources.resources
+C:\Temp\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\obj\Debug\Pierre-de-Foyer.csproj.GenerateResource.Cache
