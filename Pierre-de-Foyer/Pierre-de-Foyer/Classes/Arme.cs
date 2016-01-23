@@ -1,21 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Pierre_de_Foyer.Classes
 {
     class Arme : Carte
     {
-        private int iDurabilite;
-        private int iAttaque;
+        public int iDurabilite { get; private set; } = 0;
+        public int iAttaque { get; private set; } = 0;
 
-        public Arme(int attaque, int durabilite)
+        public Arme(int id, int mana, string description, string heros, string nom, Image imageCarte, int durabilite, int attaque)
         {
+            iId = id;
+            iMana = mana;
+            strDescription = description;
+            strHeros = heros;
             bAttaquable = false;
-            this.iDurabilite = durabilite;
-            this.iAttaque = attaque;
+            _imageCarte = imageCarte;
+            iDurabilite = durabilite;
+            iAttaque = attaque;
         }
 
         public void Attaquer()
@@ -26,7 +35,7 @@ namespace Pierre_de_Foyer.Classes
             }
             else
             {
-                ArmeDetruite();
+                Detruire();
             }
             
         }
@@ -49,17 +58,7 @@ namespace Pierre_de_Foyer.Classes
             return iDurabilite;
         }
 
-        public int getAttaque()
-        {
-            return iAttaque;
-        }
-
-        public int getDurabilite()
-        {
-            return iDurabilite;
-        }
-
-        public void ArmeDetruite()
+        public void Detruire()
         {
             this.Enabled = false;
         }

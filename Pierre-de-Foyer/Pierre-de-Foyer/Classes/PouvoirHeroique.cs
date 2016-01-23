@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Pierre_de_Foyer.Classes;
+
 
 namespace Pierre_de_Foyer.Classes
 {
