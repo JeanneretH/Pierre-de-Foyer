@@ -22,6 +22,7 @@ namespace Pierre_de_Foyer
         Classes.Hero heroAdverse = new Classes.Hero();
         Carte[] MainHero = new Carte[12];
         Carte[] MainHeroAdverce = new Carte[12];
+        bool bTour = true;
 
         private void Plateau_Load(object sender, EventArgs e)
         {
@@ -30,6 +31,8 @@ namespace Pierre_de_Foyer
             pbxHeroAdverse.BackColor = Color.Red;
             pbxPouvoirHero.BackColor = Color.Yellow;
             pbxPouvoirHeroAdverse.BackColor = Color.Yellow;
+            pbxDeck.BackColor = Color.Blue;
+            pbxDeckAdverse.BackColor = Color.Blue;
 
             //Placement des objets
             pbxHero.Location = new Point(this.Width / 2 - pbxHero.Width / 2, this.Height - pbxHeroAdverse.Height);
@@ -38,6 +41,11 @@ namespace Pierre_de_Foyer
             pbxPouvoirHeroAdverse.Location = new Point(this.Width / 2 - pbxHeroAdverse.Width / 2 - pbxPouvoirHeroAdverse.Width, 0);
             btnPasser.Location = new Point(this.Width - btnPasser.Width, this.Height / 2 - btnPasser.Height / 2);
             btnRetour.Location = new Point(this.Width - btnRetour.Width, 0);
+
+            //Affichage de la main (Temporaire)
+            pbxDeck.Location = new Point(this.Width / 4 * 3, 0);
+            pbxDeck.Top = this.Height - pbxDeck.Height;
+            pbxDeckAdverse.Location = new Point(this.Width / 4, 0);
         }
 
         private void Plateau_Paint(object sender, PaintEventArgs e)
@@ -72,6 +80,35 @@ namespace Pierre_de_Foyer
             Form menu = new Menu();
             menu.Show();
             this.Close();
+        }
+
+        private void pbxDeckAdverse_Click(object sender, EventArgs e)
+        {
+            if(bTour == false)
+            {
+                AfficheCarte(MainHeroAdverce);
+            }
+        }
+
+        private void pbxDeck_Click(object sender, EventArgs e)
+        {
+            if(bTour == true)
+            {
+                AfficheCarte(MainHero);
+            }
+        }
+
+        private void AfficheCarte(Carte[] main)
+        {
+            foreach(Carte carte in main)
+            {
+                int iCompteur = 0;
+                PictureBox pbxCarte = new PictureBox();
+                pbxCarte.Location = new Point(10 * 100 * iCompteur);
+                pbxCarte.Name = carte.getNom();
+                pbxCarte.Size = new Size(150, 100);
+                Controls.Add(pbxCarte);
+            }
         }
     }
 }
