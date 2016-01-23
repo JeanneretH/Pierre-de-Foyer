@@ -14,57 +14,22 @@ namespace Pierre_de_Foyer
 {
     class Carte:PictureBox
     {
-        protected int iId = 0;
-        protected int iMana = 0;
-        protected string strDescription = "";
-        protected string strHeros = "";
-        protected string strNom = "";
-        protected bool bAttaquable = true;
+        //on va voir cette syntaxe dans le 226b
+        protected int iId { get; set; }
+        protected int iMana { get; set; }
+        protected string strDescription { get; set; }
+        protected string strHeros { get; set; }
+        protected string strNom { get; set; }
+        protected bool bAttaquable { get; set; }
+
 
         /// <summary>
         /// Constructeur par défaut
         /// </summary>
-        /// <param name="mana">coût de la carte</param>
-        /// <param name="description">description de la carte</param>
-        /// <param name="hero">hero auquel appartient la carte</param>
-        /// <param name="attaquable">true si la carte est attaquable, false si elle ne l'est pas</param>
         public Carte()
         {
-            //this.Size = new Size()
-            //this.Image = pr
+
         }
-
-        public int getId()
-        {
-            return iId;
-        }
-
-        public int getMana()
-        {
-            return iMana;
-        }
-
-        public string getDescription()
-        {
-            return strDescription;
-        }
-
-        public string getHeros()
-        {
-            return strHeros;
-        }
-
-        public string getNom()
-        {
-            return strNom;
-        }
-
-        public bool getAttaquable()
-        {
-            return bAttaquable;
-        }
-
-
 
 
         /// <summary>
