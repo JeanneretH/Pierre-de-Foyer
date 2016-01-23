@@ -1,0 +1,11 @@
+@SteeveDroz
+
+Problème 1
+Quand je déclare ma propriété de cette manière 'public string strNom { get; private set; } = "";' certaines personnes ont une erreur au niveau du signe égal avec l'erreur suivante
+'Invalid token '=' in class, struct, or interface member declaration' alors que certaines n'ont absolument rien et le programme compile.
+
+Problème 2
+Nous avons remarqué que trois personne du groupe, lorsqu'ils font un local merge, n'ont pas l'upstream à sélectionner. Après plusieurs essais nous n'avons pas trouvé 
+de solution et ils doivent recloner le repository pour avoir les fichiers à jour.
+
+Merci d'avance
