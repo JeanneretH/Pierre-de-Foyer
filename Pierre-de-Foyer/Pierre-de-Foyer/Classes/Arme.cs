@@ -20,6 +20,14 @@ namespace Pierre_de_Foyer.Classes
 
         public void Attaquer()
         {
+            if (iDurabilite >= 2)
+            {
+                iDurabilite -= 1;
+            }
+            else
+            {
+                ArmeDetruite();
+            }
             
         }
 
@@ -51,9 +59,14 @@ namespace Pierre_de_Foyer.Classes
             return iDurabilite;
         }
 
+        public void ArmeDetruite()
+        {
+            this.Enabled = false;
+        }
+
         public override string ToString()
         {
-            return base.ToString();
+            return iDurabilite + " " + iAttaque;
         }
     }
 }
