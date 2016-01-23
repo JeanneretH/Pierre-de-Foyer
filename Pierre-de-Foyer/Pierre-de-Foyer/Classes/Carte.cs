@@ -15,12 +15,13 @@ namespace Pierre_de_Foyer
     class Carte:PictureBox
     {
         //on va voir cette syntaxe dans le 226b
-        protected int iId { get; set; }
-        protected int iMana { get; set; }
-        protected string strDescription { get; set; }
-        protected string strHeros { get; set; }
-        protected string strNom { get; set; }
-        protected bool bAttaquable { get; set; }
+        public int iId { get; protected set; } = 0;
+        public int iMana { get; set; } = 0;
+        public string strDescription { get; protected set; } = "";
+        public string strHeros { get; protected set; } = "";
+        public string strNom { get; protected set; } = "";
+        public bool bAttaquable { get; set; } = false;
+        public Image _imageCarte;
 
 
         /// <summary>

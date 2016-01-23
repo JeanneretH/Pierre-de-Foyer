@@ -38,6 +38,11 @@ namespace Pierre_de_Foyer
             pbxPouvoirHeroAdverse.Location = new Point(this.Width / 2 - pbxHeroAdverse.Width / 2 - pbxPouvoirHeroAdverse.Width, 0);
             btnPasser.Location = new Point(this.Width - btnPasser.Width, this.Height / 2 - btnPasser.Height / 2);
             btnRetour.Location = new Point(this.Width - btnRetour.Width, 0);
+
+            //Création d'une carte test
+            Serviteur ServiteurTest = new Serviteur(1, 10, "Détruit tous les serviteurs et vous défausse de votre main.", "Je savais pas quoi mettre", "Aile de mort", true, Properties.Resources.AileDeMort, 12, 12, true, false, false);
+            ServiteurTest.Location = new Point(100, 100);
+            Controls.Add(ServiteurTest);
         }
 
         private void Plateau_Paint(object sender, PaintEventArgs e)
