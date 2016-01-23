@@ -7,14 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Pierre_de_Foyer.Classes;
 
 namespace Pierre_de_Foyer
 {
     class Serviteur:Carte
     {
-        //on va voir ca dans le 226b
+        //propriétés
         public int iAttaque { get; set; } = 0;
-        public int iVie { get; set; } = 0;
+        public int iPointDeVie { get; set; } = 0;
         public bool bPeutAttaquer { get; set; } = false;
         public bool bProvocation { get; set; } = false;
         public bool bCharge { get; set; } = false;
@@ -34,7 +35,7 @@ namespace Pierre_de_Foyer
         /// <param name="peutAttaquer">'true' si le heros peut attaquer</param>
         /// <param name="provocation">'true' si la carte est une provocation</param>
         /// <param name="charge">'true' si la carte a charge</param>
-        public Serviteur(int id, int mana, string description, string heros, string nom, bool attaquable,Image imageCarte, int attaque, int vie, bool peutAttaquer, bool provocation, bool charge)
+        public Serviteur(int id, int mana, string description, string heros, string nom, bool attaquable,Image imageCarte, int attaque, int pointDeVie, bool peutAttaquer, bool provocation, bool charge)
         {
             iId = id;
             iMana = mana;
@@ -43,10 +44,47 @@ namespace Pierre_de_Foyer
             bAttaquable = attaquable;
             _imageCarte = imageCarte;
             iAttaque = attaque;
-            iVie = vie;
+            iPointDeVie = pointDeVie;
             bPeutAttaquer = peutAttaquer;
             bProvocation = provocation;
             bCharge = charge;
+        }
+
+        /// <summary>
+        /// Permet au serviteur de se prendre des dégats
+        /// </summary>
+        /// <param name="nbrDegats">nombre de dégats subit par le hero</param>
+        public void PrendreDesDegats(int nbrDegats)
+        {
+            iPointDeVie -= nbrDegats;
+        }
+
+        /// <summary>
+        /// Permet d'attaquer un serviteur adverse
+        /// </summary>
+        /// <param name="serviteur">Il faut spécifier le serviteur en question</param>
+        public void Attaquer(Serviteur serviteur)
+        {
+            serviteur.PrendreDesDegats(iAttaque);//on appelle la méthode 'PrendreDesDegats' du serviteur spécifié en paramétre
+            PrendreDesDegats(serviteur.iAttaque);//on spécifie en paramétre l'attaque du serviteur passé en paramétre
+        }
+
+        /// <summary>
+        /// Permet d'attaquer un hero adverse
+        /// </summary>
+        /// <param name="hero">Il faut spécifier le hero en question</param>
+        public void Attaquer(Hero hero)
+        {
+            hero.PrendreDesDegats(iAttaque);//on appelle la méthode 'PrendreDesDegats' du hero spécifié en paramétre
+            PrendreDesDegats(hero.iAttaque);//on spécifie en paramétre l'attaque du hero passé en paramétre
+        }
+
+        /// <summary>
+        /// Permet de tuer un serviteur 
+        /// </summary>
+        public void Mourrir()
+        {
+            this.Enabled = false;
         }
 
         /// <summary>
@@ -61,8 +99,13 @@ namespace Pierre_de_Foyer
 
             if(bProvocation == true)
             {
-                /**/
+                /*A venir*/
             }
+        }
+
+        public override string ToString()
+        {
+            return iAttaque + " " + iPointDeVie + " " + bPeutAttaquer + " " + bProvocation + " " + bCharge;
         }
     }
 }
