@@ -72,3 +72,5 @@ C:\Users\Vincent\Desktop\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\bin\Debug
 C:\Users\Vincent\Desktop\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\obj\Debug\Pierre-de-Foyer.exe
 C:\Users\Vincent\Desktop\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\obj\Debug\Pierre-de-Foyer.pdb
 >>>>>>> upstream/master
+C:\Users\Mordecai\Desktop\PDF\Pierre-de-Foyer\Pierre-de-Foyer\bin\Debug\Pierre-de-Foyer.exe
+C:\Users\Mordecai\Desktop\PDF\Pierre-de-Foyer\Pierre-de-Foyer\bin\Debug\Pierre-de-Foyer.pdb

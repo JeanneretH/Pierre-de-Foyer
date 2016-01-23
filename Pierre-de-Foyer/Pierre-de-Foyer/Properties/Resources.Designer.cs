@@ -69,5 +69,35 @@ namespace Pierre_de_Foyer.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CarteHuit_Temporaire {
+            get {
+                object obj = ResourceManager.GetObject("CarteHuit_Temporaire", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CarteMannequinCrashTest_Temporaire {
+            get {
+                object obj = ResourceManager.GetObject("CarteMannequinCrashTest_Temporaire", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CarteSachaTempeteDeGato_Temporaire {
+            get {
+                object obj = ResourceManager.GetObject("CarteSachaTempeteDeGato_Temporaire", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
