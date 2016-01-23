@@ -53,7 +53,7 @@ namespace Pierre_de_Foyer.Classes
 
         public override string ToString()
         {
-            return base.ToString();
+            return iDurabilite + " " + iAttaque;
         }
     }
 }
