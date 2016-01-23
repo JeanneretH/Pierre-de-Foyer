@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Pierre_de_Foyer.Classes;
 
 
 
@@ -14,7 +15,7 @@ namespace Pierre_de_Foyer
 {
     class Carte:PictureBox
     {
-        //on va voir cette syntaxe dans le 226b
+        //propriétés
         public int iId { get; protected set; } = 0;
         public int iMana { get; set; } = 0;
         public string strDescription { get; protected set; } = "";
@@ -36,9 +37,10 @@ namespace Pierre_de_Foyer
         /// <summary>
         /// Permettra de jouer la carte
         /// </summary>
-        public void Jouer()
+        /// <param name="deck">il faut passer une liste de carte</param>
+        public void Jouer(List<Carte> deck)
         {
-
+            deck.Add(this);
         }
 
         /// <summary>
@@ -46,12 +48,12 @@ namespace Pierre_de_Foyer
         /// </summary>
         public void Deffauser()
         {
-
+            this.Enabled = false;
         }
 
         public override string ToString()
         {
-            return iId + " " + iMana + " " + strDescription + " " + strHeros + " " + bAttaquable;
+            return iId + " " + iMana + " " + strDescription + " " + strHeros + " " + strNom + " " + bAttaquable + " " + Convert.ToString(_imageCarte);
         }
     }
 }
