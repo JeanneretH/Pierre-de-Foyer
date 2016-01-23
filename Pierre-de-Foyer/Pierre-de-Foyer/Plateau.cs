@@ -25,6 +25,39 @@ namespace Pierre_de_Foyer
         List<Carte> MainHeroAdverce = new List<Carte>();
         bool bTour = true, bDejaUtilise = false;
 
+        List<Carte> DeckHero = new List<Carte>();
+
+        Serviteur ServiteurTest = new Serviteur(1, 1, "Charge, provocation, râle d'agonie, cri de guerre invoque un autre mannequin.", "Je savais pas quoi mettre", "Mannequin crash test", true, Properties.Resources.CarteMannequinCrashTest_Temporaire, 1, 1, true, true, true);
+        Serviteur ServiteurTest2 = new Serviteur(1, 1, "Charge, provocation, râle d'agonie, cri de guerre invoque un autre mannequin.", "Je savais pas quoi mettre", "Mannequin crash test", true, Properties.Resources.CarteMannequinCrashTest_Temporaire, 1, 1, true, true, true);
+        Serviteur ServiteurTest3 = new Serviteur(1, 1, "Charge, provocation, râle d'agonie, cri de guerre invoque un autre mannequin.", "Je savais pas quoi mettre", "Mannequin crash test", true, Properties.Resources.CarteMannequinCrashTest_Temporaire, 1, 1, true, true, true);
+        Serviteur ServiteurTest4 = new Serviteur(1, 1, "Charge, provocation, râle d'agonie, cri de guerre invoque un autre mannequin.", "Je savais pas quoi mettre", "Mannequin crash test", true, Properties.Resources.CarteMannequinCrashTest_Temporaire, 1, 1, true, true, true);
+        Serviteur ServiteurTest5 = new Serviteur(1, 1, "Charge, provocation, râle d'agonie, cri de guerre invoque un autre mannequin.", "Je savais pas quoi mettre", "Mannequin crash test", true, Properties.Resources.CarteMannequinCrashTest_Temporaire, 1, 1, true, true, true);
+        Serviteur ServiteurTest6 = new Serviteur(1, 1, "Charge, provocation, râle d'agonie, cri de guerre invoque un autre mannequin.", "Je savais pas quoi mettre", "Mannequin crash test", true, Properties.Resources.CarteMannequinCrashTest_Temporaire, 1, 1, true, true, true);
+        Serviteur ServiteurTest7 = new Serviteur(1, 1, "Charge, provocation, râle d'agonie, cri de guerre invoque un autre mannequin.", "Je savais pas quoi mettre", "Mannequin crash test", true, Properties.Resources.CarteMannequinCrashTest_Temporaire, 1, 1, true, true, true);
+        Serviteur ServiteurTest8 = new Serviteur(1, 1, "Charge, provocation, râle d'agonie, cri de guerre invoque un autre mannequin.", "Je savais pas quoi mettre", "Mannequin crash test", true, Properties.Resources.CarteMannequinCrashTest_Temporaire, 1, 1, true, true, true);
+        Serviteur ServiteurTest9 = new Serviteur(1, 1, "Charge, provocation, râle d'agonie, cri de guerre invoque un autre mannequin.", "Je savais pas quoi mettre", "Mannequin crash test", true, Properties.Resources.CarteMannequinCrashTest_Temporaire, 1, 1, true, true, true);
+        Serviteur ServiteurTest10 = new Serviteur(1, 1, "Charge, provocation, râle d'agonie, cri de guerre invoque un autre mannequin.", "Je savais pas quoi mettre", "Mannequin crash test", true, Properties.Resources.CarteMannequinCrashTest_Temporaire, 1, 1, true, true, true);
+        Serviteur ServiteurTest11 = new Serviteur(1, 1, "Charge, provocation, râle d'agonie, cri de guerre invoque un autre mannequin.", "Je savais pas quoi mettre", "Mannequin crash test", true, Properties.Resources.CarteMannequinCrashTest_Temporaire, 1, 1, true, true, true);
+        Serviteur ServiteurTest12 = new Serviteur(1, 1, "Charge, provocation, râle d'agonie, cri de guerre invoque un autre mannequin.", "Je savais pas quoi mettre", "Mannequin crash test", true, Properties.Resources.CarteMannequinCrashTest_Temporaire, 1, 1, true, true, true);
+        Serviteur ServiteurTest13 = new Serviteur(1, 1, "Charge, provocation, râle d'agonie, cri de guerre invoque un autre mannequin.", "Je savais pas quoi mettre", "Mannequin crash test", true, Properties.Resources.CarteMannequinCrashTest_Temporaire, 1, 1, true, true, true);
+        Serviteur ServiteurTest14 = new Serviteur(1, 1, "Charge, provocation, râle d'agonie, cri de guerre invoque un autre mannequin.", "Je savais pas quoi mettre", "Mannequin crash test", true, Properties.Resources.CarteMannequinCrashTest_Temporaire, 1, 1, true, true, true);
+        Serviteur ServiteurTest15 = new Serviteur(1, 1, "Charge, provocation, râle d'agonie, cri de guerre invoque un autre mannequin.", "Je savais pas quoi mettre", "Mannequin crash test", true, Properties.Resources.CarteMannequinCrashTest_Temporaire, 1, 1, true, true, true);
+        Serviteur ServiteurTest16 = new Serviteur(1, 1, "Charge, provocation, râle d'agonie, cri de guerre invoque un autre mannequin.", "Je savais pas quoi mettre", "Mannequin crash test", true, Properties.Resources.CarteMannequinCrashTest_Temporaire, 1, 1, true, true, true);
+        Serviteur ServiteurTest17 = new Serviteur(1, 1, "Charge, provocation, râle d'agonie, cri de guerre invoque un autre mannequin.", "Je savais pas quoi mettre", "Mannequin crash test", true, Properties.Resources.CarteMannequinCrashTest_Temporaire, 1, 1, true, true, true);
+        Serviteur ServiteurTest18 = new Serviteur(1, 1, "Charge, provocation, râle d'agonie, cri de guerre invoque un autre mannequin.", "Je savais pas quoi mettre", "Mannequin crash test", true, Properties.Resources.CarteMannequinCrashTest_Temporaire, 1, 1, true, true, true);
+        Serviteur ServiteurTest19 = new Serviteur(1, 1, "Charge, provocation, râle d'agonie, cri de guerre invoque un autre mannequin.", "Je savais pas quoi mettre", "Mannequin crash test", true, Properties.Resources.CarteMannequinCrashTest_Temporaire, 1, 1, true, true, true);
+        Serviteur ServiteurTest20 = new Serviteur(1, 1, "Charge, provocation, râle d'agonie, cri de guerre invoque un autre mannequin.", "Je savais pas quoi mettre", "Mannequin crash test", true, Properties.Resources.CarteMannequinCrashTest_Temporaire, 1, 1, true, true, true);
+        Serviteur ServiteurTest21 = new Serviteur(1, 8, "Son attaque ne change jamais.", "Je savais pas quoi mettre", "Huit", true, Properties.Resources.CarteHuit_Temporaire, 8, 8, true, false, false);
+        Serviteur ServiteurTest22 = new Serviteur(1, 8, "Son attaque ne change jamais.", "Je savais pas quoi mettre", "Huit", true, Properties.Resources.CarteHuit_Temporaire, 8, 8, true, false, false);
+        Serviteur ServiteurTest23 = new Serviteur(1, 8, "Son attaque ne change jamais.", "Je savais pas quoi mettre", "Huit", true, Properties.Resources.CarteHuit_Temporaire, 8, 8, true, false, false);
+        Serviteur ServiteurTest24 = new Serviteur(1, 8, "Son attaque ne change jamais.", "Je savais pas quoi mettre", "Huit", true, Properties.Resources.CarteHuit_Temporaire, 8, 8, true, false, false);
+        Serviteur ServiteurTest25 = new Serviteur(1, 8, "Son attaque ne change jamais.", "Je savais pas quoi mettre", "Huit", true, Properties.Resources.CarteHuit_Temporaire, 8, 8, true, false, false);
+        Serviteur ServiteurTest26 = new Serviteur(1, 8, "Son attaque ne change jamais.", "Je savais pas quoi mettre", "Huit", true, Properties.Resources.CarteHuit_Temporaire, 8, 8, true, false, false);
+        Serviteur ServiteurTest27 = new Serviteur(1, 8, "Son attaque ne change jamais.", "Je savais pas quoi mettre", "Huit", true, Properties.Resources.CarteHuit_Temporaire, 8, 8, true, false, false);
+        Serviteur ServiteurTest28 = new Serviteur(1, 8, "Son attaque ne change jamais.", "Je savais pas quoi mettre", "Huit", true, Properties.Resources.CarteHuit_Temporaire, 8, 8, true, false, false);
+        Serviteur ServiteurTest29 = new Serviteur(1, 8, "Son attaque ne change jamais.", "Je savais pas quoi mettre", "Huit", true, Properties.Resources.CarteHuit_Temporaire, 8, 8, true, false, false);
+        Serviteur ServiteurTest30 = new Serviteur(1, 8, "Son attaque ne change jamais.", "Je savais pas quoi mettre", "Huit", true, Properties.Resources.CarteHuit_Temporaire, 8, 8, true, false, false);
+
         private void Plateau_Load(object sender, EventArgs e)
         {
             //Image des objet (Temporaire)
@@ -43,7 +76,7 @@ namespace Pierre_de_Foyer
             btnPasser.Location = new Point(this.Width - btnPasser.Width, this.Height / 2 - btnPasser.Height / 2);
             btnRetour.Location = new Point(this.Width - btnRetour.Width, 0);
 
-            //Création d'une carte test
+            /*Création d'une carte test
             Serviteur ServiteurTest = new Serviteur(1, 10, "Détruit tous les serviteurs et vous défausse de votre main.", "Je savais pas quoi mettre", "Aile de mort", true, Properties.Resources.AileDeMort, 12, 12, true, false, false);
             Serviteur ServiteurTest2 = new Serviteur(1, 10, "Détruit tous les serviteurs et vous défausse de votre main.", "Je savais pas quoi mettre", "Aile de mort", true, Properties.Resources.AileDeMort, 12, 12, true, false, false);
             Serviteur ServiteurTest3 = new Serviteur(1, 10, "Détruit tous les serviteurs et vous défausse de votre main.", "Je savais pas quoi mettre", "Aile de mort", true, Properties.Resources.AileDeMort, 12, 12, true, false, false);
@@ -56,22 +89,55 @@ namespace Pierre_de_Foyer
             Serviteur ServiteurTest10 = new Serviteur(1, 10, "Détruit tous les serviteurs et vous défausse de votre main.", "Je savais pas quoi mettre", "Aile de mort", true, Properties.Resources.AileDeMort, 12, 12, true, false, false);
             Serviteur ServiteurTest11 = new Serviteur(1, 10, "Détruit tous les serviteurs et vous défausse de votre main.", "Je savais pas quoi mettre", "Aile de mort", true, Properties.Resources.AileDeMort, 12, 12, true, false, false);
             Serviteur ServiteurTest12 = new Serviteur(1, 10, "Détruit tous les serviteurs et vous défausse de votre main.", "Je savais pas quoi mettre", "Aile de mort", true, Properties.Resources.AileDeMort, 12, 12, true, false, false);
+            */
 
-            MainHero.Add(ServiteurTest);
-            MainHero.Add(ServiteurTest2);
-            MainHero.Add(ServiteurTest3);
-            MainHero.Add(ServiteurTest4);
-            MainHero.Add(ServiteurTest5);
-            MainHero.Add(ServiteurTest6);
-            MainHero.Add(ServiteurTest7);
-            MainHero.Add(ServiteurTest8);
-            MainHero.Add(ServiteurTest9);
-            MainHero.Add(ServiteurTest10);
-            MainHero.Add(ServiteurTest11);
-            MainHero.Add(ServiteurTest12);
+            DeckHero.Add(ServiteurTest);
+            DeckHero.Add(ServiteurTest2);
+            DeckHero.Add(ServiteurTest3);
+            DeckHero.Add(ServiteurTest2);
+            DeckHero.Add(ServiteurTest3);
+            DeckHero.Add(ServiteurTest4);
+            DeckHero.Add(ServiteurTest5);
+            DeckHero.Add(ServiteurTest6);
+            DeckHero.Add(ServiteurTest7);
+            DeckHero.Add(ServiteurTest8);
+            DeckHero.Add(ServiteurTest9);
+            DeckHero.Add(ServiteurTest10);
+            DeckHero.Add(ServiteurTest11);
+            DeckHero.Add(ServiteurTest12);
+            DeckHero.Add(ServiteurTest13);
+            DeckHero.Add(ServiteurTest14);
+            DeckHero.Add(ServiteurTest15);
+            DeckHero.Add(ServiteurTest16);
+            DeckHero.Add(ServiteurTest17);
+            DeckHero.Add(ServiteurTest18);
+            DeckHero.Add(ServiteurTest19);
+            DeckHero.Add(ServiteurTest20);
+            DeckHero.Add(ServiteurTest21);
+            DeckHero.Add(ServiteurTest22);
+            DeckHero.Add(ServiteurTest23);
+            DeckHero.Add(ServiteurTest24);
+            DeckHero.Add(ServiteurTest25);
+            DeckHero.Add(ServiteurTest26);
+            DeckHero.Add(ServiteurTest27);
+            DeckHero.Add(ServiteurTest28);
+            DeckHero.Add(ServiteurTest29);
+            DeckHero.Add(ServiteurTest30);
 
-            //Affichage de la main (Temporaire)
-            pbxDeck.Location = new Point(this.Width / 4 * 3, 0);
+            for (int i = 0; i < 4; i++)
+            {
+                MainHero.Add(hero.PiocherCartes(DeckHero));
+                PictureBox pbxCarte = new PictureBox();
+                pbxCarte.Size = new Size(200, 250);
+                pbxCarte.Location = new Point(this.Width / 2 + (5 + pbxCarte.Width) * i, (this.Height / 3) * 2 - pbxCarte.Height / 2);
+                pbxCarte.Name = hero.PiocherCartes(DeckHero).strNom;
+                pbxCarte.BackColor = Color.White;
+                pbxCarte.Image = hero.PiocherCartes(DeckHero)._imageCarte;
+                Controls.Add(pbxCarte);
+            }
+
+        //Affichage de la main (Temporaire)
+        pbxDeck.Location = new Point(this.Width / 4 * 3, 0);
             pbxDeck.Top = this.Height - pbxDeck.Height;
             pbxDeckAdverse.Location = new Point(this.Width / 4, 0);
         }
@@ -108,12 +174,12 @@ namespace Pierre_de_Foyer
         {
             if(bTour == true)
             {
-                heroAdverse.PiocherCartes();
+                heroAdverse.PiocherCartes(DeckHero);
                 bTour = false;
             }
             else
             {
-                hero.PiocherCartes();
+                hero.PiocherCartes(DeckHero);
                 bTour = true;
             }
             bDejaUtilise = false;
@@ -149,10 +215,10 @@ namespace Pierre_de_Foyer
             foreach (Carte carte in main)
             {
                 PictureBox pbxCarte = new PictureBox();
-                pbxCarte.Size = new Size(150, 250);
-                pbxCarte.Location = new Point((5 + pbxCarte.Width) * iCompteur, this.Height / 2 - pbxCarte.Height / 2);
+                pbxCarte.Size = new Size(200, 250);
+                pbxCarte.Location = new Point((5 + pbxCarte.Width) * iCompteur, (this.Height  / 3) * 2 - pbxCarte.Height / 2);
                 pbxCarte.Name = carte.strNom;
-                pbxCarte.BackColor = Color.Pink;
+                pbxCarte.BackColor = Color.White;
                 pbxCarte.Image = carte._imageCarte;
                 Controls.Add(pbxCarte);
                 iCompteur++;
