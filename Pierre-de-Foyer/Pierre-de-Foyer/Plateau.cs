@@ -88,7 +88,7 @@ namespace Pierre_de_Foyer
         {
             if (bTour == true && bDejaUtilise == false)
             {
-                hero.getPouvoirHeroique();
+                hero._pouvoirHeroique();
                 bDejaUtilise = true;
             }
         }
