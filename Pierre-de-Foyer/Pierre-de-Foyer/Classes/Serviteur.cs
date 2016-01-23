@@ -12,17 +12,57 @@ namespace Pierre_de_Foyer
 {
     class Serviteur:Carte
     {
-        private int iAttaque = 0;
-        private int iVie = 0;
-        private bool bProvocation = false;
-        private bool bCharge = false;
-        private bool bCriDeGuerre = false;
-        private bool bRaleAgonie = false;
+        //on va voir ca dans le 226b
+        public int iAttaque { get; set; } = 0;
+        public int iVie { get; set; } = 0;
+        public bool bPeutAttaquer { get; set; } = false;
+        public bool bProvocation { get; set; } = false;
+        public bool bCharge { get; set; } = false;
 
 
-        public Serviteur(int attaque, int vie, bool provocation, bool charge, bool criDeGuerre, bool raleAgonie)
+        /// <summary>
+        /// Constructeur par défaut de la classe serviteur
+        /// </summary>
+        /// <param name="id">id de la carte</param>
+        /// <param name="mana">cout en mana de la carte</param>
+        /// <param name="description">description de la carte</param>
+        /// <param name="heros">hero a qui appartient la carte</param>
+        /// <param name="nom">nom de la carte</param>
+        /// <param name="attaquable">mettre à 'true' si la carte peut se faire attaquer</param>
+        /// <param name="attaque">nombre de point d'attaque</param>
+        /// <param name="vie">nombre de point de vie</param>
+        /// <param name="peutAttaquer">'true' si le heros peut attaquer</param>
+        /// <param name="provocation">'true' si la carte est une provocation</param>
+        /// <param name="charge">'true' si la carte a charge</param>
+        public Serviteur(int id, int mana, string description, string heros, string nom, bool attaquable,Image imageCarte, int attaque, int vie, bool peutAttaquer, bool provocation, bool charge)
         {
-            
+            iId = id;
+            iMana = mana;
+            strDescription = description;
+            strHeros = heros;
+            bAttaquable = attaquable;
+            _imageCarte = imageCarte;
+            iAttaque = attaque;
+            iVie = vie;
+            bPeutAttaquer = peutAttaquer;
+            bProvocation = provocation;
+            bCharge = charge;
+        }
+
+        /// <summary>
+        /// transforme le serviteur selon ces attributs
+        /// </summary>
+        public void Transformation()
+        {
+            if(bCharge == true)
+            {
+                bPeutAttaquer = true;
+            }
+
+            if(bProvocation == true)
+            {
+                /**/
+            }
         }
     }
 }

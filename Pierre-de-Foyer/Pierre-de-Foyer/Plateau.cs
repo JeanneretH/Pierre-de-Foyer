@@ -42,6 +42,11 @@ namespace Pierre_de_Foyer
             btnPasser.Location = new Point(this.Width - btnPasser.Width, this.Height / 2 - btnPasser.Height / 2);
             btnRetour.Location = new Point(this.Width - btnRetour.Width, 0);
 
+            //Création d'une carte test
+            Serviteur ServiteurTest = new Serviteur(1, 10, "Détruit tous les serviteurs et vous défausse de votre main.", "Je savais pas quoi mettre", "Aile de mort", true, Properties.Resources.AileDeMort, 12, 12, true, false, false);
+            ServiteurTest.Location = new Point(100, 100);
+            Controls.Add(ServiteurTest);
+
             //Affichage de la main (Temporaire)
             pbxDeck.Location = new Point(this.Width / 4 * 3, 0);
             pbxDeck.Top = this.Height - pbxDeck.Height;
@@ -105,7 +110,7 @@ namespace Pierre_de_Foyer
                 int iCompteur = 0;
                 PictureBox pbxCarte = new PictureBox();
                 pbxCarte.Location = new Point(10 * 100 * iCompteur);
-                pbxCarte.Name = carte.getNom();
+                pbxCarte.Name = carte.strNom;
                 pbxCarte.Size = new Size(150, 100);
                 Controls.Add(pbxCarte);
             }
