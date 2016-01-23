@@ -154,7 +154,6 @@ namespace Pierre_de_Foyer
         {
             if (bTour == true && bDejaUtilise == false)
             {
-                hero.getPouvoirHeroique();
                 bDejaUtilise = true;
             }
         }
@@ -164,7 +163,6 @@ namespace Pierre_de_Foyer
         {
             if(bTour == false && bDejaUtilise == false)
             {
-                heroAdverse.getPouvoirHeroique();
                 bDejaUtilise = true;
             }
         }
