@@ -48,6 +48,7 @@ namespace Pierre_de_Foyer
             else
             {
                 MessageBox.Show("Le nom de compte ou le mot de passe sont incorrect", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tbxPass.Clear();
             }
         }
 

@@ -26,9 +26,14 @@ namespace Pierre_de_Foyer
 
         private void NewCompte_Click(object sender, EventArgs e)
         {
-            if (!InscriptionCompte())
+            if (InscriptionCompte())
+            {
+                
+            }
+            else
             {
                 MessageBox.Show("Le nom de compte est déjà utilisé", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tbxMotDePasse.Clear();
             }
 
         }
@@ -39,15 +44,19 @@ namespace Pierre_de_Foyer
         /// <returns>true si le compte a été créé, et false si un compte à ce nom existe déjà</returns>
         private bool InscriptionCompte()
         {
-            string strCompteTest = tbxNom.Text;
+            string strCompte = tbxNom.Text;
 
             using (StreamReader sr = File.OpenText("Compte.txt"))
             {
                 string strTxt;
+                
                 while ((strTxt = sr.ReadLine()) != null)
                 {
-                    if (strTxt == strCompteTest)
+                    string[] tableau = strTxt.Split(';');
+                    if (tableau[0] == strCompte)
+                    {
                         return false;
+                    }
                 }
             }
             return true;
