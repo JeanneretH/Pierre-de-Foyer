@@ -31,6 +31,7 @@ namespace Pierre_de_Foyer
             lblPass.Location = new Point(tbxPass.Location.X, tbxPass.Location.Y - lblPass.Height - 2);
             tbxUsername.Location = new Point(lblPass.Location.X, lblPass.Location.Y - tbxUsername.Height - 6);
             lblUsername.Location = new Point(tbxUsername.Location.X, tbxUsername.Location.Y - lblUsername.Height - 2);
+            btnInscription.Location = new Point();
         }
 
         /// <summary>
@@ -70,6 +71,11 @@ namespace Pierre_de_Foyer
                 }
             }
             return false;
+        }
+
+        private bool InscriptionCompte()
+        {
+            return true;
         }
 
         /// <summary>

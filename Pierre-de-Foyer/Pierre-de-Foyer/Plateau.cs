@@ -95,7 +95,6 @@ namespace Pierre_de_Foyer
         {
             if (bTour == true && bDejaUtilise == false)
             {
-                hero._pouvoirHeroique();
                 bDejaUtilise = true;
             }
         }
@@ -105,7 +104,6 @@ namespace Pierre_de_Foyer
         {
             if(bTour == false && bDejaUtilise == false)
             {
-                heroAdverse._pouvoirHeroique();
                 bDejaUtilise = true;
             }
         }
