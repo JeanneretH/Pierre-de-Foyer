@@ -46,10 +46,6 @@ namespace Pierre_de_Foyer
                 DeckHero.Add(Huit);
             }
 
-            //temporaire
-            Bdd test = new Bdd();
-            btnPasser.Text = test.AffichageDeDonnée();
-            //temporaire
 
             //Image des objet (Temporaire)
             pbxHero.BackColor = Color.Green;
