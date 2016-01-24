@@ -22,26 +22,51 @@ namespace Pierre_de_Foyer
         {
             //Placement des objets
             btnInscription.Location = new Point(this.Width / 2 - btnInscription.Width / 2, this.Height / 2 - btnInscription.Height);
+            tbxMotDePasse.Location = new Point(btnInscription.Location.X, btnInscription.Location.Y - tbxMotDePasse.Height - 6);
+            lblMotDePasse.Location = new Point(tbxMotDePasse.Location.X, tbxMotDePasse.Location.Y - lblMotDePasse.Height - 2);
+            tbxNom.Location = new Point(lblMotDePasse.Location.X, lblMotDePasse.Location.Y - tbxNom.Height - 6);
+            lblNom.Location = new Point(tbxNom.Location.X, tbxNom.Location.Y - lblNom.Height - 2);
+            btnRetourMenu.Location = new Point(btnInscription.Location.X, btnInscription.Location.Y + btnInscription.Height + 6);
         }
 
+
+        /// <summary>
+        /// On teste pour savoir si le compte peut être créé (on teste si tous les chmaps sont remplis et si le nom n'existe pas encore)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NewCompte_Click(object sender, EventArgs e)
         {
-            if (InscriptionCompte())
+            if (String.IsNullOrEmpty(tbxMotDePasse.Text) || String.IsNullOrEmpty(tbxNom.Text))
             {
-                
+                MessageBox.Show("Vous devez remplir l'intégralité des champs", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tbxMotDePasse.Clear();
+            }
+            else if (InscriptionCompte())
+            {
+                using (StreamWriter w = File.AppendText("Compte.txt"))
+                {
+                    w.WriteLine(tbxNom.Text + ";" + tbxMotDePasse.Text, w);
+                    w.Close();
+                }
+                MessageBox.Show("Votre compte a été créé, Vous pouvez desormais vous connecter avec celui-ci", "Réussite", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tbxMotDePasse.Clear();
+                tbxNom.Clear();
+                Connection connection = new Connection();
+                connection.Show();
+                this.Visible = false;
             }
             else
             {
                 MessageBox.Show("Le nom de compte est déjà utilisé", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 tbxMotDePasse.Clear();
             }
-
         }
 
         /// <summary>
         /// on regarde si le compte est déjà utilisé ou non, et si non on l'inscrit et on confirme
         /// </summary>
-        /// <returns>true si le compte a été créé, et false si un compte à ce nom existe déjà</returns>
+        /// <returns>true si le compte n'existe pas, et false si un compte à ce nom existe déjà</returns>
         private bool InscriptionCompte()
         {
             string strCompte = tbxNom.Text;
