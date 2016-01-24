@@ -35,6 +35,7 @@
             this.lblPass = new System.Windows.Forms.Label();
             this.tbxUsername = new System.Windows.Forms.TextBox();
             this.tbxPass = new System.Windows.Forms.TextBox();
+            this.btnInscription = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnConnection
@@ -42,17 +43,17 @@
             this.btnConnection.Location = new System.Drawing.Point(12, 90);
             this.btnConnection.Name = "btnConnection";
             this.btnConnection.Size = new System.Drawing.Size(201, 29);
-            this.btnConnection.TabIndex = 0;
+            this.btnConnection.TabIndex = 2;
             this.btnConnection.Text = "Connection";
             this.btnConnection.UseVisualStyleBackColor = true;
             this.btnConnection.Click += new System.EventHandler(this.btnConnection_Click);
             // 
             // btnQuitter
             // 
-            this.btnQuitter.Location = new System.Drawing.Point(12, 125);
+            this.btnQuitter.Location = new System.Drawing.Point(12, 160);
             this.btnQuitter.Name = "btnQuitter";
             this.btnQuitter.Size = new System.Drawing.Size(201, 29);
-            this.btnQuitter.TabIndex = 1;
+            this.btnQuitter.TabIndex = 4;
             this.btnQuitter.Text = "Quitter";
             this.btnQuitter.UseVisualStyleBackColor = true;
             this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
@@ -62,9 +63,9 @@
             this.lblUsername.AutoSize = true;
             this.lblUsername.Location = new System.Drawing.Point(12, 9);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(88, 13);
-            this.lblUsername.TabIndex = 2;
-            this.lblUsername.Text = "Nom de compte :";
+            this.lblUsername.Size = new System.Drawing.Size(82, 13);
+            this.lblUsername.TabIndex = 6;
+            this.lblUsername.Text = "Nom de compte";
             // 
             // lblPass
             // 
@@ -80,14 +81,24 @@
             this.tbxUsername.Location = new System.Drawing.Point(12, 25);
             this.tbxUsername.Name = "tbxUsername";
             this.tbxUsername.Size = new System.Drawing.Size(201, 20);
-            this.tbxUsername.TabIndex = 4;
+            this.tbxUsername.TabIndex = 0;
             // 
             // tbxPass
             // 
             this.tbxPass.Location = new System.Drawing.Point(12, 64);
             this.tbxPass.Name = "tbxPass";
             this.tbxPass.Size = new System.Drawing.Size(201, 20);
-            this.tbxPass.TabIndex = 5;
+            this.tbxPass.TabIndex = 1;
+            // 
+            // btnInscription
+            // 
+            this.btnInscription.Location = new System.Drawing.Point(12, 125);
+            this.btnInscription.Name = "btnInscription";
+            this.btnInscription.Size = new System.Drawing.Size(201, 29);
+            this.btnInscription.TabIndex = 3;
+            this.btnInscription.Text = "Inscription ";
+            this.btnInscription.UseVisualStyleBackColor = true;
+            this.btnInscription.Click += new System.EventHandler(this.btnInscription_Click);
             // 
             // Connection
             // 
@@ -98,6 +109,7 @@
             this.Controls.Add(this.tbxUsername);
             this.Controls.Add(this.lblPass);
             this.Controls.Add(this.lblUsername);
+            this.Controls.Add(this.btnInscription);
             this.Controls.Add(this.btnQuitter);
             this.Controls.Add(this.btnConnection);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -119,6 +131,7 @@
         private System.Windows.Forms.Label lblPass;
         private System.Windows.Forms.TextBox tbxUsername;
         private System.Windows.Forms.TextBox tbxPass;
+        private System.Windows.Forms.Button btnInscription;
     }
 }
 
