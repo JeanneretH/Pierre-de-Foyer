@@ -19,7 +19,8 @@ namespace Pierre_de_Foyer
 
         private void Inscription_Load(object sender, EventArgs e)
         {
-
+            //Placement des objets
+            btnInscription.Location = new Point(this.Width / 2 - btnInscription.Width / 2, this.Height / 2 - btnInscription.Height);
         }
 
         private void NewCompte_Click(object sender, EventArgs e)
@@ -29,7 +30,9 @@ namespace Pierre_de_Foyer
 
         private void RetourMenu_Click(object sender, EventArgs e)
         {
-
+            Form connection = new Connection();
+            connection.Show();
+            this.Visible = false;
         }
     }
 }

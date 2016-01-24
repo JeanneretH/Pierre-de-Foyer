@@ -88,5 +88,10 @@ namespace Pierre_de_Foyer
         {
             return true;
         }
+
+        private void btnQuitter_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

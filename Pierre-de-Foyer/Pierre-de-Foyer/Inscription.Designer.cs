@@ -104,6 +104,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Inscription";
             this.Text = "Pierre-de-Foyer";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Inscription_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
