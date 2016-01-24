@@ -16,5 +16,20 @@ namespace Pierre_de_Foyer
         {
             InitializeComponent();
         }
+
+        private void Inscription_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NewCompte_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RetourMenu_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

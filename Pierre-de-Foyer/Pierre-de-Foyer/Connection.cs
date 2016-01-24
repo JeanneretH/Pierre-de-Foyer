@@ -53,7 +53,9 @@ namespace Pierre_de_Foyer
 
         private void btnInscription_Click(object sender, EventArgs e)
         {
-
+            Form inscription = new Inscription();
+            inscription.Show();
+            this.Visible = false;
         }
 
         /// <summary>
