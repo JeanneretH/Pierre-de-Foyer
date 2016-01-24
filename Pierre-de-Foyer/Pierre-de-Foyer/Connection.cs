@@ -80,15 +80,6 @@ namespace Pierre_de_Foyer
             return false;
         }
 
-        /// <summary>
-        /// on regarde si le compte est déjà utilisé ou non, et si non on l'inscrit et on confirme
-        /// </summary>
-        /// <returns>true si le compte a été créé, et false si un compte à ce nom existe déjà</returns>
-        private bool InscriptionCompte()
-        {
-            return true;
-        }
-
         private void btnQuitter_Click(object sender, EventArgs e)
         {
             Application.Exit();

@@ -32,7 +32,7 @@
             this.btnInscription = new System.Windows.Forms.Button();
             this.btnRetourMenu = new System.Windows.Forms.Button();
             this.lblNom = new System.Windows.Forms.Label();
-            this.tbxUsername = new System.Windows.Forms.TextBox();
+            this.tbxNom = new System.Windows.Forms.TextBox();
             this.lblMotDePasse = new System.Windows.Forms.Label();
             this.tbxMotDePasse = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -66,12 +66,12 @@
             this.lblNom.TabIndex = 2;
             this.lblNom.Text = "Votre nom";
             // 
-            // tbxUsername
+            // tbxNom
             // 
-            this.tbxUsername.Location = new System.Drawing.Point(12, 29);
-            this.tbxUsername.Name = "tbxUsername";
-            this.tbxUsername.Size = new System.Drawing.Size(201, 20);
-            this.tbxUsername.TabIndex = 5;
+            this.tbxNom.Location = new System.Drawing.Point(12, 29);
+            this.tbxNom.Name = "tbxNom";
+            this.tbxNom.Size = new System.Drawing.Size(201, 20);
+            this.tbxNom.TabIndex = 5;
             // 
             // lblMotDePasse
             // 
@@ -95,7 +95,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.tbxMotDePasse);
-            this.Controls.Add(this.tbxUsername);
+            this.Controls.Add(this.tbxNom);
             this.Controls.Add(this.lblMotDePasse);
             this.Controls.Add(this.lblNom);
             this.Controls.Add(this.btnRetourMenu);
@@ -116,7 +116,7 @@
         private System.Windows.Forms.Button btnInscription;
         private System.Windows.Forms.Button btnRetourMenu;
         private System.Windows.Forms.Label lblNom;
-        private System.Windows.Forms.TextBox tbxUsername;
+        private System.Windows.Forms.TextBox tbxNom;
         private System.Windows.Forms.Label lblMotDePasse;
         private System.Windows.Forms.TextBox tbxMotDePasse;
     }

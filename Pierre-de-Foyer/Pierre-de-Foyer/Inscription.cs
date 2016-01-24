@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Pierre_de_Foyer
 {
@@ -25,7 +26,31 @@ namespace Pierre_de_Foyer
 
         private void NewCompte_Click(object sender, EventArgs e)
         {
+            if (!InscriptionCompte())
+            {
+                MessageBox.Show("Le nom de compte est déjà utilisé", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
 
+        }
+
+        /// <summary>
+        /// on regarde si le compte est déjà utilisé ou non, et si non on l'inscrit et on confirme
+        /// </summary>
+        /// <returns>true si le compte a été créé, et false si un compte à ce nom existe déjà</returns>
+        private bool InscriptionCompte()
+        {
+            string strCompteTest = tbxNom.Text;
+
+            using (StreamReader sr = File.OpenText("Compte.txt"))
+            {
+                string strTxt;
+                while ((strTxt = sr.ReadLine()) != null)
+                {
+                    if (strTxt == strCompteTest)
+                        return false;
+                }
+            }
+            return true;
         }
 
         private void RetourMenu_Click(object sender, EventArgs e)
@@ -34,5 +59,6 @@ namespace Pierre_de_Foyer
             connection.Show();
             this.Visible = false;
         }
+
     }
 }
