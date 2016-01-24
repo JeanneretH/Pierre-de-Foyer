@@ -22,6 +22,11 @@ namespace Pierre_de_Foyer
         {
             //Placement des objets
             btnInscription.Location = new Point(this.Width / 2 - btnInscription.Width / 2, this.Height / 2 - btnInscription.Height);
+            tbxMotDePasse.Location = new Point(btnInscription.Location.X, btnInscription.Location.Y - tbxMotDePasse.Height - 6);
+            lblMotDePasse.Location = new Point(tbxMotDePasse.Location.X, tbxMotDePasse.Location.Y - lblMotDePasse.Height - 2);
+            tbxNom.Location = new Point(lblMotDePasse.Location.X, lblMotDePasse.Location.Y - tbxNom.Height - 6);
+            lblNom.Location = new Point(tbxNom.Location.X, tbxNom.Location.Y - lblNom.Height - 2);
+            btnRetourMenu.Location = new Point(btnInscription.Location.X, btnInscription.Location.Y + btnInscription.Height + 6);
         }
 
         private void NewCompte_Click(object sender, EventArgs e)
