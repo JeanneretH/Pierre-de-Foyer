@@ -66,13 +66,11 @@ namespace Pierre_de_Foyer
             for (int i = 0; i < 4; i++)
             {
                 MainHero.Add(hero.PiocherCartes(DeckHero));
-                PictureBox pbxCarte = new PictureBox();
-                pbxCarte.Size = new Size(200, 250);
-                pbxCarte.Location = new Point(this.Width / 2 + (5 + pbxCarte.Width) * i, (this.Height / 3) * 2 - pbxCarte.Height / 2);
-                pbxCarte.Name = hero.PiocherCartes(DeckHero).strNom;
-                pbxCarte.BackColor = Color.White;
-                pbxCarte.Image = hero.PiocherCartes(DeckHero)._imageCarte;
-                Controls.Add(pbxCarte);
+            }
+
+            for (int i = 0; i < 4; i++)
+            {
+                MainHeroAdverce.Add(hero.PiocherCartes(DeckHero));
             }
 
             //Affichage de la main (Temporaire)
@@ -132,7 +130,7 @@ namespace Pierre_de_Foyer
 
         private void pbxDeckAdverse_Click(object sender, EventArgs e)
         {
-            if(bTour == false)
+            if (bTour == false)
             {
                 AfficheCarte(MainHeroAdverce);
             }
@@ -149,16 +147,33 @@ namespace Pierre_de_Foyer
         private void AfficheCarte(List<Carte> main)
         {
             int iCompteur = 0;
-            foreach (Carte carte in main)
+            if (bTour)
             {
-                PictureBox pbxCarte = new PictureBox();
-                pbxCarte.Size = new Size(200, 250);
-                pbxCarte.Location = new Point((5 + pbxCarte.Width) * iCompteur, (this.Height  / 3) * 2 - pbxCarte.Height / 2);
-                pbxCarte.Name = carte.strNom;
-                pbxCarte.BackColor = Color.White;
-                pbxCarte.Image = carte._imageCarte;
-                Controls.Add(pbxCarte);
-                iCompteur++;
+                foreach (Carte carte in main)
+                {
+                    PictureBox pbxCarte = new PictureBox();
+                    pbxCarte.Size = new Size(200, 250);
+                    pbxCarte.Location = new Point((5 + pbxCarte.Width) * iCompteur, (this.Height / 3) * 2 - pbxCarte.Height / 2);
+                    pbxCarte.Name = carte.strNom;
+                    pbxCarte.BackColor = Color.White;
+                    pbxCarte.Image = carte._imageCarte;
+                    Controls.Add(pbxCarte);
+                    iCompteur++;
+                }
+            }
+            else
+            {
+                foreach (Carte carte in main)
+                {
+                    PictureBox pbxCarte = new PictureBox();
+                    pbxCarte.Size = new Size(200, 250);
+                    pbxCarte.Location = new Point((5 + pbxCarte.Width) * iCompteur, this.Height / 3 - pbxCarte.Height / 2);
+                    pbxCarte.Name = carte.strNom;
+                    pbxCarte.BackColor = Color.White;
+                    pbxCarte.Image = carte._imageCarte;
+                    Controls.Add(pbxCarte);
+                    iCompteur++;
+                }
             }
         }
     }
