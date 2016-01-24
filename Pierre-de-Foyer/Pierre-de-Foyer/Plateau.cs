@@ -25,8 +25,28 @@ namespace Pierre_de_Foyer
         List<Carte> MainHeroAdverce = new List<Carte>();
         bool bTour = true, bDejaUtilise = false;
 
+        //déclaration de la liste
+        List<Carte> DeckHero = new List<Carte>();
+
         private void Plateau_Load(object sender, EventArgs e)
         {
+            //Ajout de 20 Mannequin
+            for (int i = 0; i < 20; i++)
+            {
+                Serviteur Mannequin = new Serviteur(1, 1, "Charge, provocation, râle d'agonie, cri de guerre invoque un autre mannequin.", "Je savais pas quoi mettre", "Mannequin crash test", true, Properties.Resources.CarteMannequinCrashTest_Temporaire, 1, 1, true, true, true);
+
+                DeckHero.Add(Mannequin);
+            }
+
+            //ajout de 10 Huit
+            for (int i = 0; i < 10; i++)
+            {
+                Serviteur Huit = new Serviteur(1, 8, "Son attaque ne change jamais.", "Je savais pas quoi mettre", "Huit", true, Properties.Resources.CarteHuit_Temporaire, 8, 8, true, false, false);
+
+                DeckHero.Add(Huit);
+            }
+
+
             //Image des objet (Temporaire)
             pbxHero.BackColor = Color.Green;
             pbxHeroAdverse.BackColor = Color.Red;
@@ -43,32 +63,15 @@ namespace Pierre_de_Foyer
             btnPasser.Location = new Point(this.Width - btnPasser.Width, this.Height / 2 - btnPasser.Height / 2);
             btnRetour.Location = new Point(this.Width - btnRetour.Width, 0);
 
-            //Création d'une carte test
-            Serviteur ServiteurTest = new Serviteur(1, 10, "Détruit tous les serviteurs et vous défausse de votre main.", "Je savais pas quoi mettre", "Aile de mort", true, Properties.Resources.AileDeMort, 12, 12, true, false, false);
-            Serviteur ServiteurTest2 = new Serviteur(1, 10, "Détruit tous les serviteurs et vous défausse de votre main.", "Je savais pas quoi mettre", "Aile de mort", true, Properties.Resources.AileDeMort, 12, 12, true, false, false);
-            Serviteur ServiteurTest3 = new Serviteur(1, 10, "Détruit tous les serviteurs et vous défausse de votre main.", "Je savais pas quoi mettre", "Aile de mort", true, Properties.Resources.AileDeMort, 12, 12, true, false, false);
-            Serviteur ServiteurTest4 = new Serviteur(1, 10, "Détruit tous les serviteurs et vous défausse de votre main.", "Je savais pas quoi mettre", "Aile de mort", true, Properties.Resources.AileDeMort, 12, 12, true, false, false);
-            Serviteur ServiteurTest5 = new Serviteur(1, 10, "Détruit tous les serviteurs et vous défausse de votre main.", "Je savais pas quoi mettre", "Aile de mort", true, Properties.Resources.AileDeMort, 12, 12, true, false, false);
-            Serviteur ServiteurTest6 = new Serviteur(1, 10, "Détruit tous les serviteurs et vous défausse de votre main.", "Je savais pas quoi mettre", "Aile de mort", true, Properties.Resources.AileDeMort, 12, 12, true, false, false);
-            Serviteur ServiteurTest7 = new Serviteur(1, 10, "Détruit tous les serviteurs et vous défausse de votre main.", "Je savais pas quoi mettre", "Aile de mort", true, Properties.Resources.AileDeMort, 12, 12, true, false, false);
-            Serviteur ServiteurTest8 = new Serviteur(1, 10, "Détruit tous les serviteurs et vous défausse de votre main.", "Je savais pas quoi mettre", "Aile de mort", true, Properties.Resources.AileDeMort, 12, 12, true, false, false);
-            Serviteur ServiteurTest9 = new Serviteur(1, 10, "Détruit tous les serviteurs et vous défausse de votre main.", "Je savais pas quoi mettre", "Aile de mort", true, Properties.Resources.AileDeMort, 12, 12, true, false, false);
-            Serviteur ServiteurTest10 = new Serviteur(1, 10, "Détruit tous les serviteurs et vous défausse de votre main.", "Je savais pas quoi mettre", "Aile de mort", true, Properties.Resources.AileDeMort, 12, 12, true, false, false);
-            Serviteur ServiteurTest11 = new Serviteur(1, 10, "Détruit tous les serviteurs et vous défausse de votre main.", "Je savais pas quoi mettre", "Aile de mort", true, Properties.Resources.AileDeMort, 12, 12, true, false, false);
-            Serviteur ServiteurTest12 = new Serviteur(1, 10, "Détruit tous les serviteurs et vous défausse de votre main.", "Je savais pas quoi mettre", "Aile de mort", true, Properties.Resources.AileDeMort, 12, 12, true, false, false);
+            for (int i = 0; i < 4; i++)
+            {
+                MainHero.Add(hero.PiocherCartes(DeckHero));
+            }
 
-            MainHero.Add(ServiteurTest);
-            MainHero.Add(ServiteurTest2);
-            MainHero.Add(ServiteurTest3);
-            MainHero.Add(ServiteurTest4);
-            MainHero.Add(ServiteurTest5);
-            MainHero.Add(ServiteurTest6);
-            MainHero.Add(ServiteurTest7);
-            MainHero.Add(ServiteurTest8);
-            MainHero.Add(ServiteurTest9);
-            MainHero.Add(ServiteurTest10);
-            MainHero.Add(ServiteurTest11);
-            MainHero.Add(ServiteurTest12);
+            for (int i = 0; i < 4; i++)
+            {
+                MainHeroAdverce.Add(hero.PiocherCartes(DeckHero));
+            }
 
             //Affichage de la main (Temporaire)
             pbxDeck.Location = new Point(this.Width / 4 * 3, 0);
@@ -88,7 +91,6 @@ namespace Pierre_de_Foyer
         {
             if (bTour == true && bDejaUtilise == false)
             {
-                hero._pouvoirHeroique();
                 bDejaUtilise = true;
             }
         }
@@ -98,7 +100,6 @@ namespace Pierre_de_Foyer
         {
             if(bTour == false && bDejaUtilise == false)
             {
-                heroAdverse.getPouvoirHeroique();
                 bDejaUtilise = true;
             }
         }
@@ -108,12 +109,12 @@ namespace Pierre_de_Foyer
         {
             if(bTour == true)
             {
-                heroAdverse.PiocherCartes();
+                heroAdverse.PiocherCartes(DeckHero);
                 bTour = false;
             }
             else
             {
-                hero.PiocherCartes();
+                hero.PiocherCartes(DeckHero);
                 bTour = true;
             }
             bDejaUtilise = false;
@@ -129,7 +130,7 @@ namespace Pierre_de_Foyer
 
         private void pbxDeckAdverse_Click(object sender, EventArgs e)
         {
-            if(bTour == false)
+            if (bTour == false)
             {
                 AfficheCarte(MainHeroAdverce);
             }
@@ -146,16 +147,33 @@ namespace Pierre_de_Foyer
         private void AfficheCarte(List<Carte> main)
         {
             int iCompteur = 0;
-            foreach (Carte carte in main)
+            if (bTour)
             {
-                PictureBox pbxCarte = new PictureBox();
-                pbxCarte.Size = new Size(150, 250);
-                pbxCarte.Location = new Point((5 + pbxCarte.Width) * iCompteur, this.Height / 2 - pbxCarte.Height / 2);
-                pbxCarte.Name = carte.strNom;
-                pbxCarte.BackColor = Color.Pink;
-                pbxCarte.Image = carte._imageCarte;
-                Controls.Add(pbxCarte);
-                iCompteur++;
+                foreach (Carte carte in main)
+                {
+                    PictureBox pbxCarte = new PictureBox();
+                    pbxCarte.Size = new Size(200, 250);
+                    pbxCarte.Location = new Point((5 + pbxCarte.Width) * iCompteur, (this.Height / 3) * 2 - pbxCarte.Height / 2);
+                    pbxCarte.Name = carte.strNom;
+                    pbxCarte.BackColor = Color.White;
+                    pbxCarte.Image = carte._imageCarte;
+                    Controls.Add(pbxCarte);
+                    iCompteur++;
+                }
+            }
+            else
+            {
+                foreach (Carte carte in main)
+                {
+                    PictureBox pbxCarte = new PictureBox();
+                    pbxCarte.Size = new Size(200, 250);
+                    pbxCarte.Location = new Point((5 + pbxCarte.Width) * iCompteur, this.Height / 3 - pbxCarte.Height / 2);
+                    pbxCarte.Name = carte.strNom;
+                    pbxCarte.BackColor = Color.White;
+                    pbxCarte.Image = carte._imageCarte;
+                    Controls.Add(pbxCarte);
+                    iCompteur++;
+                }
             }
         }
     }
