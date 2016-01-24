@@ -33,7 +33,15 @@ namespace Pierre_de_Foyer
         {
             if (InscriptionCompte())
             {
-                
+                if (String.IsNullOrEmpty(tbxMotDePasse.Text) && String.IsNullOrEmpty(tbxNom.Text))
+                {
+                    MessageBox.Show("Vous devez remplir l'intégralité des champs", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    tbxMotDePasse.Clear();
+                }
+                else
+                {
+
+                }
             }
             else
             {
