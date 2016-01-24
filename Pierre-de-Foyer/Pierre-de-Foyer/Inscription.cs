@@ -44,12 +44,17 @@ namespace Pierre_de_Foyer
             }
             else if (InscriptionCompte())
             {
-                StreamWriter s = new StreamWriter("TestComptes.txt");
-                s.WriteLine(tbxNom.Text + ";" + tbxMotDePasse.Text);
-                s.Close();
-                MessageBox.Show("Votre compte a été créé, Vous pouvez desormais vous connecter avec celui-ci", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                using (StreamWriter w = File.AppendText("Compte.txt"))
+                {
+                    w.WriteLine(tbxNom.Text + ";" + tbxMotDePasse.Text, w);
+                    w.Close();
+                }
+                MessageBox.Show("Votre compte a été créé, Vous pouvez desormais vous connecter avec celui-ci", "Réussite", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 tbxMotDePasse.Clear();
                 tbxNom.Clear();
+                Connection connection = new Connection();
+                connection.Show();
+                this.Visible = false;
             }
             else
             {
