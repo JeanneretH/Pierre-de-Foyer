@@ -29,32 +29,37 @@ namespace Pierre_de_Foyer
             btnRetourMenu.Location = new Point(btnInscription.Location.X, btnInscription.Location.Y + btnInscription.Height + 6);
         }
 
+
+        /// <summary>
+        /// On teste pour savoir si le compte peut être créé (on teste si tous les chmaps sont remplis et si le nom n'existe pas encore)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NewCompte_Click(object sender, EventArgs e)
         {
-            if (InscriptionCompte())
-            {
-                if (String.IsNullOrEmpty(tbxMotDePasse.Text) && String.IsNullOrEmpty(tbxNom.Text))
+                if (String.IsNullOrEmpty(tbxMotDePasse.Text) || String.IsNullOrEmpty(tbxNom.Text))
                 {
                     MessageBox.Show("Vous devez remplir l'intégralité des champs", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     tbxMotDePasse.Clear();
                 }
                 else
                 {
-
+                    if (InscriptionCompte())
+                    {
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show("Le nom de compte est déjà utilisé", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        tbxMotDePasse.Clear();
+                    }
                 }
-            }
-            else
-            {
-                MessageBox.Show("Le nom de compte est déjà utilisé", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                tbxMotDePasse.Clear();
-            }
-
         }
 
         /// <summary>
         /// on regarde si le compte est déjà utilisé ou non, et si non on l'inscrit et on confirme
         /// </summary>
-        /// <returns>true si le compte a été créé, et false si un compte à ce nom existe déjà</returns>
+        /// <returns>true si le compte n'existe pas, et false si un compte à ce nom existe déjà</returns>
         private bool InscriptionCompte()
         {
             string strCompte = tbxNom.Text;
