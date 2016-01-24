@@ -51,6 +51,11 @@ namespace Pierre_de_Foyer
             }
         }
 
+        private void btnInscription_Click(object sender, EventArgs e)
+        {
+
+        }
+
         /// <summary>
         /// Vérifie si les identifiants rentré sont inclu dans les comptes enregistré dans le text.
         /// </summary>
@@ -80,14 +85,6 @@ namespace Pierre_de_Foyer
         private bool InscriptionCompte()
         {
             return true;
-        }
-
-        /// <summary>
-        /// Permet à l'utilisateur de quitter le programme
-        /// </summary>
-        private void btnQuitter_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }
