@@ -83,7 +83,7 @@ namespace Pierre_de_Foyer.Classes
         /// <returns>La carte pioché est retourné</returns>
         public Carte PiocherCartes(List<Carte> deck)
         {
-            Carte _cartePioche = deck[_random.Next(0, deck.Count)];
+            Carte _cartePioche = deck[_random.Next(0, deck.Count)];//permet de tirer une carte Random dans le deck
 
             return _cartePioche;
         }

@@ -52,6 +52,7 @@
     </Compile>
     <Compile Include="Classes\Hero.cs" />
     <Compile Include="Classes\PouvoirHeroique.cs" />
+    <Compile Include="Classes\Sort.cs" />
     <Compile Include="Connection.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +110,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AileDeMort.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CarteHuit_Temporaire.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CarteMannequinCrashTest_Temporaire.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CarteSachaTempeteDeGato_Temporaire.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
