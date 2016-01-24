@@ -99,5 +99,15 @@ namespace Pierre_de_Foyer.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Dos_de_Carte_Hugo {
+            get {
+                object obj = ResourceManager.GetObject("Dos_de_Carte_Hugo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

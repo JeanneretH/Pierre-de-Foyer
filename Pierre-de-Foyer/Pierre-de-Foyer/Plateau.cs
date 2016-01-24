@@ -67,11 +67,13 @@ namespace Pierre_de_Foyer
             {
                 MainHero.Add(hero.PiocherCartes(DeckHero));
             }
+            CacherMain(MainHero, "joueur");
 
             for (int i = 0; i < 4; i++)
             {
                 MainHeroAdverce.Add(hero.PiocherCartes(DeckHero));
             }
+            CacherMain(MainHeroAdverce, "adversaire");
 
             //Affichage de la main (Temporaire)
             pbxDeck.Location = new Point(this.Width / 4 * 3, 0);
@@ -111,12 +113,15 @@ namespace Pierre_de_Foyer
             {
                 heroAdverse.PiocherCartes(DeckHero);
                 bTour = false;
+                CacherMain(MainHero, "joueur");
             }
             else
             {
                 hero.PiocherCartes(DeckHero);
                 bTour = true;
+                CacherMain(MainHeroAdverce, "joueur");
             }
+
             bDejaUtilise = false;
         }
 
@@ -151,13 +156,12 @@ namespace Pierre_de_Foyer
             {
                 foreach (Carte carte in main)
                 {
-                    PictureBox pbxCarte = new PictureBox();
-                    pbxCarte.Size = new Size(200, 250);
-                    pbxCarte.Location = new Point((5 + pbxCarte.Width) * iCompteur, (this.Height / 3) * 2 - pbxCarte.Height / 2);
-                    pbxCarte.Name = carte.strNom;
-                    pbxCarte.BackColor = Color.White;
-                    pbxCarte.Image = carte._imageCarte;
-                    Controls.Add(pbxCarte);
+                    carte.Size = new Size(200, 250);
+                    carte.Location = new Point((5 + carte.Width) * iCompteur, this.Height - carte.Height - 4);
+                    carte.Name = carte.strNom;
+                    carte.BackColor = Color.White;
+                    carte.Image = carte._imageCarte;
+                    Controls.Add(carte);
                     iCompteur++;
                 }
             }
@@ -165,13 +169,44 @@ namespace Pierre_de_Foyer
             {
                 foreach (Carte carte in main)
                 {
-                    PictureBox pbxCarte = new PictureBox();
-                    pbxCarte.Size = new Size(200, 250);
-                    pbxCarte.Location = new Point((5 + pbxCarte.Width) * iCompteur, this.Height / 3 - pbxCarte.Height / 2);
-                    pbxCarte.Name = carte.strNom;
-                    pbxCarte.BackColor = Color.White;
-                    pbxCarte.Image = carte._imageCarte;
-                    Controls.Add(pbxCarte);
+                    carte.Size = new Size(200, 250);
+                    carte.Location = new Point((5 + carte.Width) * iCompteur, 4);
+                    carte.Name = carte.strNom;
+                    carte.BackColor = Color.White;
+                    carte.Image = carte._imageCarte;
+                    Controls.Add(carte);
+                    iCompteur++;
+                }
+            }
+        }
+
+        private void CacherMain(List<Carte> main, string hero)
+        {
+            int iCompteur = 0;
+
+            if (hero == "joueur")
+            {
+                foreach (Carte carte in main)
+                {
+                    carte.Size = new Size(200, 250);
+                    carte.Location = new Point((5 + carte.Width) * iCompteur, this.Height - carte.Height - 4);
+                    carte.Name = carte.strNom;
+                    carte.BackColor = Color.White;
+                    carte.Image = Properties.Resources.Dos_de_Carte_Hugo;
+                    Controls.Add(carte);
+                    iCompteur++;
+                }
+            }
+            if(hero == "adversaire")
+            {
+                foreach (Carte carte in main)
+                {
+                    carte.Size = new Size(200, 250);
+                    carte.Location = new Point((5 + carte.Width) * iCompteur, 4);
+                    carte.Name = carte.strNom;
+                    carte.BackColor = Color.White;
+                    carte.Image = Properties.Resources.Dos_de_Carte_Hugo;
+                    Controls.Add(carte);
                     iCompteur++;
                 }
             }
