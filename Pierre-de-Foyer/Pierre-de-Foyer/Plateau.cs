@@ -93,10 +93,6 @@ namespace Pierre_de_Foyer
         {
             if (bTour == true && bDejaUtilise == false)
             {
-<<<<<<< HEAD
-                hero._pouvoirHeroique();
-=======
->>>>>>> refs/remotes/origin/master
                 bDejaUtilise = true;
             }
         }

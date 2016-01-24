@@ -74,3 +74,14 @@ C:\Users\Vincent\Desktop\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\obj\Debug
 >>>>>>> upstream/master
 C:\Users\Mordecai\Desktop\PDF\Pierre-de-Foyer\Pierre-de-Foyer\bin\Debug\Pierre-de-Foyer.exe
 C:\Users\Mordecai\Desktop\PDF\Pierre-de-Foyer\Pierre-de-Foyer\bin\Debug\Pierre-de-Foyer.pdb
+C:\Users\Seriox2105\Desktop\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\bin\Debug\Pierre-de-Foyer.exe.config
+C:\Users\Seriox2105\Desktop\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\obj\Debug\Pierre-de-Foyer.exe
+C:\Users\Seriox2105\Desktop\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\obj\Debug\Pierre-de-Foyer.pdb
+C:\Users\Seriox2105\Desktop\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\obj\Debug\Pierre-de-Foyer.csprojResolveAssemblyReference.cache
+C:\Users\Seriox2105\Desktop\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\obj\Debug\Pierre_de_Foyer.Connection.resources
+C:\Users\Seriox2105\Desktop\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\obj\Debug\Pierre_de_Foyer.Menu.resources
+C:\Users\Seriox2105\Desktop\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\obj\Debug\Pierre_de_Foyer.Plateau.resources
+C:\Users\Seriox2105\Desktop\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\obj\Debug\Pierre_de_Foyer.Properties.Resources.resources
+C:\Users\Seriox2105\Desktop\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\obj\Debug\Pierre-de-Foyer.csproj.GenerateResource.Cache
+C:\Users\Seriox2105\Desktop\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\bin\Debug\Pierre-de-Foyer.exe
+C:\Users\Seriox2105\Desktop\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\bin\Debug\Pierre-de-Foyer.pdb
