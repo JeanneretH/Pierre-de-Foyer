@@ -77,6 +77,8 @@ namespace Pierre_de_Foyer
             pbxDeck.Location = new Point(this.Width / 4 * 3, 0);
             pbxDeck.Top = this.Height - pbxDeck.Height;
             pbxDeckAdverse.Location = new Point(this.Width / 4, 0);
+
+            
         }
 
         private void Plateau_Paint(object sender, PaintEventArgs e)

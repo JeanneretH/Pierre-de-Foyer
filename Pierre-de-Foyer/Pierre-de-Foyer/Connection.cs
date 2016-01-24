@@ -26,11 +26,12 @@ namespace Pierre_de_Foyer
 
             //Placement des objets
             btnConnection.Location = new Point(this.Width / 2 - btnConnection.Width / 2, this.Height / 2 - btnConnection.Height);
-            btnQuitter.Location = new Point(btnConnection.Location.X, btnConnection.Location.Y + btnConnection.Height + 6);
             tbxPass.Location = new Point(btnConnection.Location.X, btnConnection.Location.Y - tbxPass.Height - 6);
             lblPass.Location = new Point(tbxPass.Location.X, tbxPass.Location.Y - lblPass.Height - 2);
             tbxUsername.Location = new Point(lblPass.Location.X, lblPass.Location.Y - tbxUsername.Height - 6);
             lblUsername.Location = new Point(tbxUsername.Location.X, tbxUsername.Location.Y - lblUsername.Height - 2);
+            btnInscription.Location = new Point(btnConnection.Location.X, btnConnection.Location.Y + btnConnection.Height + 6);
+            btnQuitter.Location = new Point(btnConnection.Location.X, btnInscription.Location.Y + btnInscription.Height + 6);
         }
 
         /// <summary>
@@ -47,7 +48,15 @@ namespace Pierre_de_Foyer
             else
             {
                 MessageBox.Show("Le nom de compte ou le mot de passe sont incorrect", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tbxPass.Clear();
             }
+        }
+
+        private void btnInscription_Click(object sender, EventArgs e)
+        {
+            Form inscription = new Inscription();
+            inscription.Show();
+            this.Visible = false;
         }
 
         /// <summary>
@@ -72,9 +81,6 @@ namespace Pierre_de_Foyer
             return false;
         }
 
-        /// <summary>
-        /// Permet à l'utilisateur de quitter le programme
-        /// </summary>
         private void btnQuitter_Click(object sender, EventArgs e)
         {
             Application.Exit();
