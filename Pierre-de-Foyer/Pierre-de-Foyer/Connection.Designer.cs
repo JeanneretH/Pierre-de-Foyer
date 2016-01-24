@@ -56,7 +56,6 @@
             this.btnQuitter.TabIndex = 1;
             this.btnQuitter.Text = "Quitter";
             this.btnQuitter.UseVisualStyleBackColor = true;
-            this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
             // 
             // lblUsername
             // 
