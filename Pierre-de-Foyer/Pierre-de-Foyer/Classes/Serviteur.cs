@@ -35,17 +35,17 @@ namespace Pierre_de_Foyer.Classes
         /// <param name="peutAttaquer">'true' si le heros peut attaquer</param>
         /// <param name="provocation">'true' si la carte est une provocation</param>
         /// <param name="charge">'true' si la carte a charge</param>
-        public Serviteur(int id, int mana, string description, string heros, string nom, bool attaquable,Image imageCarte, int attaque, int pointDeVie, bool peutAttaquer, bool provocation, bool charge)
+        public Serviteur(int id, int mana, string description, string heros, string nom, Image imageCarte, int attaque, int pointDeVie, bool provocation, bool charge)
         {
             iId = id;
             iMana = mana;
             strDescription = description;
             strHeros = heros;
-            bAttaquable = attaquable;
+            bAttaquable = true;
             _imageCarte = imageCarte;
             iAttaque = attaque;
             iPointDeVie = pointDeVie;
-            bPeutAttaquer = peutAttaquer;
+            bPeutAttaquer = false;
             bProvocation = provocation;
             bCharge = charge;
         }

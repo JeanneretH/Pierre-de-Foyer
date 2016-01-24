@@ -33,7 +33,7 @@ namespace Pierre_de_Foyer
             //Ajout de 20 Mannequin
             for (int i = 0; i < 20; i++)
             {
-                Serviteur Mannequin = new Serviteur(1, 1, "Charge, provocation, râle d'agonie, cri de guerre invoque un autre mannequin.", "Je savais pas quoi mettre", "Mannequin crash test", true, Properties.Resources.CarteMannequinCrashTest_Temporaire, 1, 1, true, true, true);
+                Serviteur Mannequin = new Serviteur(1, 1, "Charge, provocation, râle d'agonie, cri de guerre invoque un autre mannequin.", "Je savais pas quoi mettre", "Mannequin crash test", Properties.Resources.CarteMannequinCrashTest_Temporaire, 1, 1, true, true);
 
                 DeckHero.Add(Mannequin);
             }
@@ -41,11 +41,15 @@ namespace Pierre_de_Foyer
             //ajout de 10 Huit
             for (int i = 0; i < 10; i++)
             {
-                Serviteur Huit = new Serviteur(1, 8, "Son attaque ne change jamais.", "Je savais pas quoi mettre", "Huit", true, Properties.Resources.CarteHuit_Temporaire, 8, 8, true, false, false);
+                Serviteur Huit = new Serviteur(1, 8, "Son attaque ne change jamais.", "Je savais pas quoi mettre", "Huit", Properties.Resources.CarteHuit_Temporaire, 8, 8, false, false);
 
                 DeckHero.Add(Huit);
             }
 
+            //temporaire
+            Bdd test = new Bdd();
+            btnPasser.Text = test.AffichageDeDonnée();
+            //temporaire
 
             //Image des objet (Temporaire)
             pbxHero.BackColor = Color.Green;
