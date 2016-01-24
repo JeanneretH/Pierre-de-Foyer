@@ -37,23 +37,25 @@ namespace Pierre_de_Foyer
         /// <param name="e"></param>
         private void NewCompte_Click(object sender, EventArgs e)
         {
-                if (String.IsNullOrEmpty(tbxMotDePasse.Text) || String.IsNullOrEmpty(tbxNom.Text))
-                {
-                    MessageBox.Show("Vous devez remplir l'intégralité des champs", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    tbxMotDePasse.Clear();
-                }
-                else
-                {
-                    if (InscriptionCompte())
-                    {
-                        
-                    }
-                    else
-                    {
-                        MessageBox.Show("Le nom de compte est déjà utilisé", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        tbxMotDePasse.Clear();
-                    }
-                }
+            if (String.IsNullOrEmpty(tbxMotDePasse.Text) || String.IsNullOrEmpty(tbxNom.Text))
+            {
+                MessageBox.Show("Vous devez remplir l'intégralité des champs", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tbxMotDePasse.Clear();
+            }
+            else if (InscriptionCompte())
+            {
+                StreamWriter s = new StreamWriter("TestComptes.txt");
+                s.WriteLine(tbxNom.Text + ";" + tbxMotDePasse.Text);
+                s.Close();
+                MessageBox.Show("Votre compte a été créé, Vous pouvez desormais vous connecter avec celui-ci", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tbxMotDePasse.Clear();
+                tbxNom.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Le nom de compte est déjà utilisé", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tbxMotDePasse.Clear();
+            }
         }
 
         /// <summary>
