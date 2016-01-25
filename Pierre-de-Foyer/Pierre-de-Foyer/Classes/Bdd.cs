@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 namespace Pierre_de_Foyer.Classes
@@ -24,14 +28,13 @@ namespace Pierre_de_Foyer.Classes
         /// </summary>
         private void InitConnexion()
         {
-            connexion = new MySqlConnection("SERVER=127.0.0.1; DATABASE=mli; UID=root; PASSWORD=");//permet de se connecter à la base de données
+            connexion = new MySqlConnection("SERVER=127.0.0.1; DATABASE=PierreDeFoyer; UID=root; PASSWORD=");//permet de se connecter à la base de données
         }
 
         /// <summary>
         /// Permet d'afficher les données de la BDD
         /// </summary>
-        /// <returns>retourne les données en question</returns>
-        public string AffichageDeDonnée()
+        public void AffichageDeDonnée()
         {
             connexion.Open();// Ouverture de la connexion SQL
 
@@ -40,10 +43,8 @@ namespace Pierre_de_Foyer.Classes
 
             while (SDR.Read())
             {
-                return Convert.ToString(SDR);
-            }
-
-            return "";           
+                MessageBox.Show(Convert.ToString(SDR));
+            }       
         }
     }
 }

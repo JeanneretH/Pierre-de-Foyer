@@ -48,7 +48,7 @@ namespace Pierre_de_Foyer
 
             //temporaire
             Bdd test = new Bdd();
-            btnPasser.Text = test.AffichageDeDonnée();
+            test.AffichageDeDonnée();
             //temporaire
 
             //Image des objet (Temporaire)
