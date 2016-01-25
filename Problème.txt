@@ -1,5 +1,13 @@
 Problème 1
-Quand je déclare ma propriété de cette manière 'public string strNom { get; private set; } = "";' certaines personnes ont une erreur au niveau du signe égal avec l'erreur suivante
-'Invalid token '=' in class, struct, or interface member declaration' alors que certaines n'ont absolument rien et le programme compile.
+La plupart des membres du groupe on le message d'erreur ci-dessous et ne peuvent plus travailler sur le projet. Même internet n'a pas su nous repondre...
 
+Erreur  Échec inattendu de la tâche "GenerateResource".
+System.NullReferenceException: La référence d'objet n'est pas définie à une instance d'un objet.
+   à Microsoft.Build.Tasks.ResGenDependencies.GetResXFileInfo(String resxFile)
+   à Microsoft.Build.Tasks.GenerateResource.ShouldRebuildResgenOutputFile(String sourceFilePath, String outputFilePath)
+   à Microsoft.Build.Tasks.GenerateResource.GetResourcesToProcess(List`1& inputsToProcess, List`1& outputsToProcess, List`1& cachedOutputFiles)
+   à Microsoft.Build.Tasks.GenerateResource.Execute()
+   à Microsoft.Build.BackEnd.TaskExecutionHost.Microsoft.Build.BackEnd.ITaskExecutionHost.Execute()
+   à Microsoft.Build.BackEnd.TaskBuilder.<ExecuteInstantiatedTask>d__26.MoveNext() Pierre-de-Foyer
+   
 Merci d'avance
