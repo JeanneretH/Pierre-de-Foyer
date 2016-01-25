@@ -1,7 +1,5 @@
-@SteeveDroz
-
-Problème 1
-Quand je déclare ma propriété de cette manière 'public string strNom { get; private set; } = "";' certaines personnes ont une erreur au niveau du signe égal avec l'erreur suivante
+ProblÃ¨me 1
+Quand je dÃ©clare ma propriÃ©tÃ© de cette maniÃ¨re 'public string strNom { get; private set; } = "";' certaines personnes ont une erreur au niveau du signe Ã©gal avec l'erreur suivante
 'Invalid token '=' in class, struct, or interface member declaration' alors que certaines n'ont absolument rien et le programme compile.
 
 Merci d'avance
