@@ -98,3 +98,4 @@ C:\Users\Seriox2105\Desktop\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\obj\De
 C:\Users\Seriox2105\Desktop\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\bin\Debug\MySql.Data.dll
 C:\Users\Seriox2105\Desktop\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\bin\Debug\MySql.Data.Entity.dll
 C:\Users\Seriox2105\Desktop\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\bin\Debug\MySql.Web.dll
+E:\Documents\GitHub\Pierre-de-Foyer\Pierre-de-Foyer\Pierre-de-Foyer\obj\Debug\Pierre_de_Foyer.Inscription.resources
