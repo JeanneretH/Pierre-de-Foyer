@@ -8,6 +8,7 @@ using System.Text;
 using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 using MySql.Data.MySqlClient;
 
 namespace Pierre_de_Foyer.Classes
@@ -101,16 +102,36 @@ namespace Pierre_de_Foyer.Classes
         /// <summary>
         /// methode test
         /// </summary>
-        public void Test()
+        /*public Image Test()
         {
             connexion.Open();// Ouverture de la connexion SQL
+            Image img = new Image();
 
             MySqlCommand Commande = new MySqlCommand("SELECT * FROM Arme", connexion);
             MySqlDataReader SDR = Commande.ExecuteReader();
 
-            datagridv
+            while (SDR.Read())
+            {
+                img = ByteArrayToImage(GetBytes(Convert.ToString(SDR["Image"])));
+            }
 
+            return img;
             connexion.Close();
+        }*/
+
+        public static Image ByteArrayToImage(byte[] byteArrayIn)
+        {
+            var ms = new MemoryStream(byteArrayIn);
+            Image returnImage = Image.FromStream(ms);
+            return returnImage;
         }
+
+        static byte[] GetBytes(string str)
+        {
+            byte[] bytes = new byte[str.Length * sizeof(char)];
+            System.Buffer.BlockCopy(str.ToCharArray(), 0, bytes, 0, bytes.Length);
+            return bytes;
+        }
+
     }
 }

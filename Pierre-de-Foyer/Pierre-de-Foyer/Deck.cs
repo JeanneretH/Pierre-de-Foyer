@@ -27,8 +27,6 @@ namespace Pierre_de_Foyer
 
             List<Label> labels = new List<Label>();
 
-            bdd.Test();
-
             /*foreach (Serviteur serviteur in serviteurs)
             {
                 Label label = new Label();
