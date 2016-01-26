@@ -109,5 +109,15 @@ namespace Pierre_de_Foyer.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Lamacorne_Temporaire {
+            get {
+                object obj = ResourceManager.GetObject("Lamacorne_Temporaire", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
