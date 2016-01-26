@@ -89,7 +89,7 @@ namespace Pierre_de_Foyer.Classes
 
             while (SDR.Read())
             {
-                Arme arme = new Arme(Convert.ToInt32(SDR["Id"]), Convert.ToInt32(SDR["Mana"]), Convert.ToString(SDR["Description"]), Convert.ToString(SDR["Heros"]), Convert.ToString(SDR["Nom"]), Properties.Resources.AileDeMort, Convert.ToInt32(SDR["Durabilite"]), Convert.ToInt32(SDR["Attaque"]));
+                Arme arme = new Arme(Convert.ToInt32(SDR["Id"]), Convert.ToInt32(SDR["Mana"]), Convert.ToString(SDR["Description"]), Convert.ToString(SDR["Heros"]), Convert.ToString(SDR["Nom"]), ImageConverter., Convert.ToInt32(SDR["Durabilite"]), Convert.ToInt32(SDR["Attaque"]));
                 armes.Add(arme);
             }
 
