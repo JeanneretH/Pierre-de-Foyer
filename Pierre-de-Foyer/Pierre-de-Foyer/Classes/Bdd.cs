@@ -28,23 +28,73 @@ namespace Pierre_de_Foyer.Classes
         /// </summary>
         private void InitConnexion()
         {
-            connexion = new MySqlConnection("SERVER=127.0.0.1; DATABASE=PierreDeFoyer; UID=root; PASSWORD=");//permet de se connecter à la base de données
+            connexion = new MySqlConnection("server=localhost;user=root;database=pierredefoyer;port=3306;password=;");//permet de se connecter à la base de données
         }
 
         /// <summary>
-        /// Permet d'afficher les données de la BDD
+        /// Permet de récupérer les serviteurs de la BDD
         /// </summary>
-        public void AffichageDeDonnée()
+        /// <returns>retourne la liste de tous les serviteurs</returns>
+        public List<Serviteur> LoadServiteurs()
         {
             connexion.Open();// Ouverture de la connexion SQL
+            List<Serviteur> serviteurs = new List<Serviteur>();
 
-            MySqlCommand Commande = new MySqlCommand("SELECT * FROM Serviteur WHERE Nom='Millouse'", connexion);
+            MySqlCommand Commande = new MySqlCommand("SELECT * FROM Serviteur", connexion);
             MySqlDataReader SDR = Commande.ExecuteReader();
 
             while (SDR.Read())
             {
-                MessageBox.Show(Convert.ToString(SDR));
-            }       
+                Serviteur serviteur = new Serviteur(Convert.ToInt32(SDR["Id"]), Convert.ToInt32(SDR["Mana"]), Convert.ToString(SDR["Description"]), Convert.ToString(SDR["Heros"]), Convert.ToString(SDR["Nom"]), Properties.Resources.AileDeMort, Convert.ToInt32(SDR["Attaque"]), Convert.ToInt32(SDR["PointDeVie"]), Convert.ToBoolean(SDR["Provocation"]), Convert.ToBoolean(SDR["Charge"]));
+                serviteurs.Add(serviteur);
+            }
+
+            connexion.Close();
+            return serviteurs;
+        }
+
+        /// <summary>
+        /// Permet de récupérer les sorts de la BDD
+        /// </summary>
+        /// <returns>retourne la liste de tous les sorts</returns>
+        public List<Sort> LoadSorts()
+        {
+            connexion.Open();// Ouverture de la connexion SQL
+            List<Sort> sorts = new List<Sort>();
+
+            MySqlCommand Commande = new MySqlCommand("SELECT * FROM Sort", connexion);
+            MySqlDataReader SDR = Commande.ExecuteReader();
+
+            while (SDR.Read())
+            {
+                Sort sort = new Sort(Convert.ToInt32(SDR["Id"]), Convert.ToInt32(SDR["Mana"]), Convert.ToString(SDR["Description"]), Convert.ToString(SDR["Heros"]), Convert.ToString(SDR["Nom"]), Properties.Resources.CarteHuit_Temporaire);
+                sorts.Add(sort);
+            }
+
+            connexion.Close();
+            return sorts;
+        }
+
+        /// <summary>
+        /// Permet de récupérer les armes de la BDD
+        /// </summary>
+        /// <returns>retourne la liste de tous les armes</returns>
+        public List<Arme> LoadArmes()
+        {
+            connexion.Open();// Ouverture de la connexion SQL
+            List<Arme> armes = new List<Arme>();
+
+            MySqlCommand Commande = new MySqlCommand("SELECT * FROM Arme", connexion);
+            MySqlDataReader SDR = Commande.ExecuteReader();
+
+            while (SDR.Read())
+            {
+                Arme arme = new Arme(Convert.ToInt32(SDR["Id"]), Convert.ToInt32(SDR["Mana"]), Convert.ToString(SDR["Description"]), Convert.ToString(SDR["Heros"]), Convert.ToString(SDR["Nom"]), Properties.Resources.AileDeMort, Convert.ToInt32(SDR["Durabilite"]), Convert.ToInt32(SDR["Attaque"]));
+                armes.Add(arme);
+            }
+
+            connexion.Close();
+            return armes;
         }
     }
 }

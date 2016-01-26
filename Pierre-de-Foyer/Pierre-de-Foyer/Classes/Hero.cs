@@ -84,6 +84,7 @@ namespace Pierre_de_Foyer.Classes
         public Carte PiocherCartes(List<Carte> deck)
         {
             Carte _cartePioche = deck[_random.Next(0, deck.Count)];//permet de tirer une carte Random dans le deck
+            deck.Remove(_cartePioche);
 
             return _cartePioche;
         }

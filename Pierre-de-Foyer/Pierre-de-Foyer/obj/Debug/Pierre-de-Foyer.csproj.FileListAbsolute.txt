@@ -94,3 +94,8 @@ C:\Users\Vincent\Desktop\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\bin\Debug
 C:\Users\Vincent\Desktop\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\bin\Debug\Pierre-de-Foyer.pdb
 C:\Users\Vincent\Desktop\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\obj\Debug\Pierre_de_Foyer.Inscription.resources
 >>>>>>> refs/remotes/origin/master
+C:\Temp\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\bin\Debug\MySql.Data.dll
+C:\Temp\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\bin\Debug\MySql.Data.Entity.dll
+C:\Temp\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\bin\Debug\MySql.Web.dll
+C:\Temp\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\obj\Debug\Pierre_de_Foyer.Inscription.resources
+C:\Temp\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\obj\Debug\Pierre_de_Foyer.Deck.resources
