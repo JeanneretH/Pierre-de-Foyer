@@ -37,6 +37,8 @@
             this.btnRetour = new System.Windows.Forms.Button();
             this.pbxDeck = new System.Windows.Forms.PictureBox();
             this.pbxDeckAdverse = new System.Windows.Forms.PictureBox();
+            this.lblDeckHeroAdverse = new System.Windows.Forms.Label();
+            this.lblDeckHero = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxHero)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxHeroAdverse)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPouvoirHero)).BeginInit();
@@ -117,11 +119,31 @@
             this.pbxDeckAdverse.TabStop = false;
             this.pbxDeckAdverse.Click += new System.EventHandler(this.pbxDeckAdverse_Click);
             // 
+            // lblDeckHeroAdverse
+            // 
+            this.lblDeckHeroAdverse.AutoSize = true;
+            this.lblDeckHeroAdverse.Location = new System.Drawing.Point(183, 305);
+            this.lblDeckHeroAdverse.Name = "lblDeckHeroAdverse";
+            this.lblDeckHeroAdverse.Size = new System.Drawing.Size(95, 13);
+            this.lblDeckHeroAdverse.TabIndex = 8;
+            this.lblDeckHeroAdverse.Text = "DeckHeroAdverse";
+            // 
+            // lblDeckHero
+            // 
+            this.lblDeckHero.AutoSize = true;
+            this.lblDeckHero.Location = new System.Drawing.Point(183, 630);
+            this.lblDeckHero.Name = "lblDeckHero";
+            this.lblDeckHero.Size = new System.Drawing.Size(56, 13);
+            this.lblDeckHero.TabIndex = 9;
+            this.lblDeckHero.Text = "DeckHero";
+            // 
             // Plateau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1353, 718);
+            this.Controls.Add(this.lblDeckHero);
+            this.Controls.Add(this.lblDeckHeroAdverse);
             this.Controls.Add(this.pbxDeckAdverse);
             this.Controls.Add(this.pbxDeck);
             this.Controls.Add(this.btnRetour);
@@ -145,6 +167,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxDeck)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxDeckAdverse)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -158,5 +181,7 @@
         private System.Windows.Forms.Button btnRetour;
         private System.Windows.Forms.PictureBox pbxDeck;
         private System.Windows.Forms.PictureBox pbxDeckAdverse;
+        private System.Windows.Forms.Label lblDeckHeroAdverse;
+        private System.Windows.Forms.Label lblDeckHero;
     }
 }
