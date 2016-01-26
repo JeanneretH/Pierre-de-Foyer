@@ -36,6 +36,13 @@ namespace Pierre_de_Foyer
         private void btnQuitter_Click(object sender, EventArgs e)
         {
             Application.Exit();
+		}
+		
+        private void btnDeck_Click(object sender, EventArgs e)
+        {
+            Form deck = new Deck();
+            deck.Show();
+            this.Close();
         }
     }
 }

@@ -53,12 +53,20 @@
     </Compile>
     <Compile Include="Classes\Hero.cs" />
     <Compile Include="Classes\PouvoirHeroique.cs" />
-    <Compile Include="Classes\Sort.cs" />
+    <Compile Include="Classes\Sort.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Connection.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Connection.Designer.cs">
       <DependentUpon>Connection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Deck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Deck.Designer.cs">
+      <DependentUpon>Deck.cs</DependentUpon>
     </Compile>
     <Compile Include="Inscription.cs">
       <SubType>Form</SubType>
@@ -85,6 +93,9 @@
     </Compile>
     <EmbeddedResource Include="Connection.resx">
       <DependentUpon>Connection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Deck.resx">
+      <DependentUpon>Deck.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inscription.resx">
       <DependentUpon>Inscription.cs</DependentUpon>

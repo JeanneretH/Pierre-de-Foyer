@@ -49,7 +49,6 @@ namespace Pierre_de_Foyer
                 DeckHeroAdverse.Add(Huit);
             }
 
-
             //Image des objet (Temporaire)
             pbxHero.BackColor = Color.Green;
             pbxHeroAdverse.BackColor = Color.Red;
@@ -169,6 +168,7 @@ namespace Pierre_de_Foyer
         private void AfficheCarte(List<Carte> main)
         {
             int iCompteur = 0;
+
             if (bTour)
             {
                 foreach (Carte carte in main)

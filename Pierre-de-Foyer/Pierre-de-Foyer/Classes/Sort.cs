@@ -11,14 +11,19 @@ using System.Windows.Forms;
 
 namespace Pierre_de_Foyer.Classes
 {
-    class Sort
+    class Sort:Carte
     {
         /// <summary>
         /// Constructeur par défaut
         /// </summary>
-        public Sort()
+        public Sort(int id, int mana, string description, string heros, string nom, Image imageCarte)
         {
-
+            iId = id;
+            iMana = mana;
+            strDescription = description;
+            strHeros = heros;
+            bAttaquable = false;
+            _imageCarte = imageCarte;
         }
     }
 }

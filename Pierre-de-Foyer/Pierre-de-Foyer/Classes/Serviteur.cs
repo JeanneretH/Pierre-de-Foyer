@@ -105,7 +105,7 @@ namespace Pierre_de_Foyer.Classes
 
         public override string ToString()
         {
-            return iAttaque + " " + iPointDeVie + " " + bPeutAttaquer + " " + bProvocation + " " + bCharge;
+            return iId + " - " + iMana + " - ";
         }
     }
 }
