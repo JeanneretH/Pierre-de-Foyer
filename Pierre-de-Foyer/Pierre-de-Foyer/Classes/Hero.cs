@@ -19,6 +19,7 @@ namespace Pierre_de_Foyer.Classes
         public int iAttaque { get; set; } = 0;
         public PouvoirHeroique _pouvoirHeroique { get; set; } = null;
         public List<Carte> _cartes { get; set; } = null;
+        public Image _ImageHero { get; private set; } = null;
         private Random _random = new Random();
 
 
@@ -38,13 +39,14 @@ namespace Pierre_de_Foyer.Classes
         /// <param name="attaqueHeros">Point d'attaque du hero</param>
         /// <param name="pouvoirHeroique">Pouvoir heroique du hero</param>
         /// <param name="cartes">deck du hero</param>
-        public Hero(string nom, int pointDeVie, int attaque, PouvoirHeroique pouvoirHeroique, List<Carte> cartes)
+        public Hero(string nom, int pointDeVie, int attaque, PouvoirHeroique pouvoirHeroique, List<Carte> cartes, Image image)
         {
             strNom = nom;
             iPointDeVie = pointDeVie;
             iAttaque = attaque;
             _pouvoirHeroique = pouvoirHeroique;
             _cartes = cartes;
+            _ImageHero = image;
         }
 
         /// <summary>
