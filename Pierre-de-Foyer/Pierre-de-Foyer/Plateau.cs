@@ -49,14 +49,11 @@ namespace Pierre_de_Foyer
                 DeckHeroAdverse.Add(Huit);
             }
 
-
             //Image des objet (Temporaire)
             pbxHero.BackColor = Color.Green;
             pbxHeroAdverse.BackColor = Color.Red;
             pbxPouvoirHero.BackColor = Color.Yellow;
             pbxPouvoirHeroAdverse.BackColor = Color.Yellow;
-            pbxDeck.BackColor = Color.Blue;
-            pbxDeckAdverse.BackColor = Color.Blue;
 
             //Placement des objets
             pbxHero.Location = new Point(this.Width / 2 - pbxHero.Width / 2, this.Height - pbxHeroAdverse.Height);
@@ -79,12 +76,6 @@ namespace Pierre_de_Foyer
                 lblDeckHeroAdverse.Text = "Cartes restante :" + Convert.ToString(DeckHeroAdverse.Count);
             }
             CacherMain(MainHeroAdverse, "adversaire");
-
-            //Affichage de la main (Temporaire)
-            pbxDeck.Location = new Point(this.Width / 4 * 3, 0);
-            pbxDeck.Top = this.Height - pbxDeck.Height;
-            pbxDeckAdverse.Location = new Point(this.Width / 4, 0);
-
             
         }
 
@@ -150,25 +141,10 @@ namespace Pierre_de_Foyer
             this.Close();
         }
 
-        private void pbxDeckAdverse_Click(object sender, EventArgs e)
-        {
-            if (bTour == false)
-            {
-                AfficheCarte(MainHeroAdverse);
-            }
-        }
-
-        private void pbxDeck_Click(object sender, EventArgs e)
-        {
-            if(bTour == true)
-            {
-                AfficheCarte(MainHero);
-            }
-        }
-
         private void AfficheCarte(List<Carte> main)
         {
             int iCompteur = 0;
+
             if (bTour)
             {
                 foreach (Carte carte in main)
@@ -177,7 +153,7 @@ namespace Pierre_de_Foyer
                     carte.Location = new Point((5 + carte.Width) * iCompteur, this.Height - carte.Height - 4);
                     carte.Name = carte.strNom;
                     carte.BackColor = Color.White;
-                    carte.Image = carte._imageCarte;
+                    carte.Image = carte._imageCarte;   
                     Controls.Add(carte);
                     iCompteur++;
                 }
@@ -210,6 +186,7 @@ namespace Pierre_de_Foyer
                     carte.Name = carte.strNom;
                     carte.BackColor = Color.White;
                     carte.Image = Properties.Resources.Dos_de_Carte_Hugo;
+                    carte.Click += new EventHandler(this.AfficheMain);
                     Controls.Add(carte);
                     iCompteur++;
                 }
@@ -223,10 +200,21 @@ namespace Pierre_de_Foyer
                     carte.Name = carte.strNom;
                     carte.BackColor = Color.White;
                     carte.Image = Properties.Resources.Dos_de_Carte_Hugo;
+                    carte.Click += new EventHandler(this.AfficheMainAdverse);
                     Controls.Add(carte);
                     iCompteur++;
                 }
             }
+        }
+
+        private void AfficheMain(object sender, EventArgs e)
+        {
+            AfficheCarte(MainHero);
+        }
+
+        private void AfficheMainAdverse(object sender, EventArgs e)
+        {
+            AfficheCarte(MainHeroAdverse);
         }
     }
 }
