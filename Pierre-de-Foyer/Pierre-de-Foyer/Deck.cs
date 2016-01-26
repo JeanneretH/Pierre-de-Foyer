@@ -27,7 +27,9 @@ namespace Pierre_de_Foyer
 
             List<Label> labels = new List<Label>();
 
-            foreach (Serviteur serviteur in serviteurs)
+            bdd.Test();
+
+            /*foreach (Serviteur serviteur in serviteurs)
             {
                 Label label = new Label();
                 label.Text = serviteur.ToString();
@@ -43,7 +45,7 @@ namespace Pierre_de_Foyer
 
                 Controls.Add(label);
                 label.Location = new Point(iX, iY);
-            }
+            }*/
         }
     }
 }

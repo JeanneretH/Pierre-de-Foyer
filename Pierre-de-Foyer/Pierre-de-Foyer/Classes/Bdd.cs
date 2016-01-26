@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
@@ -13,7 +14,7 @@ namespace Pierre_de_Foyer.Classes
 {
     class Bdd
     {
-        /* private MySqlConnection connexion;
+        private MySqlConnection connexion;
 
          /// <summary>
          /// Constructeur par défaut
@@ -89,12 +90,27 @@ namespace Pierre_de_Foyer.Classes
 
             while (SDR.Read())
             {
-                Arme arme = new Arme(Convert.ToInt32(SDR["Id"]), Convert.ToInt32(SDR["Mana"]), Convert.ToString(SDR["Description"]), Convert.ToString(SDR["Heros"]), Convert.ToString(SDR["Nom"]), ImageConverter., Convert.ToInt32(SDR["Durabilite"]), Convert.ToInt32(SDR["Attaque"]));
+                Arme arme = new Arme(Convert.ToInt32(SDR["Id"]), Convert.ToInt32(SDR["Mana"]), Convert.ToString(SDR["Description"]), Convert.ToString(SDR["Heros"]), Convert.ToString(SDR["Nom"]), null , Convert.ToInt32(SDR["Durabilite"]), Convert.ToInt32(SDR["Attaque"]));
                 armes.Add(arme);
             }
 
             connexion.Close();
             return armes;
+        }
+
+        /// <summary>
+        /// methode test
+        /// </summary>
+        public void Test()
+        {
+            connexion.Open();// Ouverture de la connexion SQL
+
+            MySqlCommand Commande = new MySqlCommand("SELECT * FROM Arme", connexion);
+            MySqlDataReader SDR = Commande.ExecuteReader();
+
+            datagridv
+
+            connexion.Close();
         }
     }
 }
