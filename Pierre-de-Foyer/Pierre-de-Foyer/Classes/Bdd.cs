@@ -13,7 +13,7 @@ namespace Pierre_de_Foyer.Classes
 {
     class Bdd
     {
-        /* private MySqlConnection connexion;
+        private MySqlConnection connexion;
 
          /// <summary>
          /// Constructeur par défaut
