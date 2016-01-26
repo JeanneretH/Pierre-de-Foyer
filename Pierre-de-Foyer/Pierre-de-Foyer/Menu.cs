@@ -21,14 +21,8 @@ namespace Pierre_de_Foyer
         {
             //Deplacement des objets
             btnJouer.Location = new Point(this.Width / 2 - btnJouer.Width / 2 , this.Height / 2 - btnJouer.Height / 2);
-            btnDeck.Location = new Point(btnJouer.Location.X , btnJouer.Location.Y - btnDeck.Height - 6);
-            btnQuitter.Location = new Point(btnJouer.Location.X , btnJouer.Location.Y + btnJouer.Height + 6);
-        }
-
-        // Permet à l'utilisateur de quitter le programme
-        private void btnQuitter_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
+            btnDeck.Location = new Point(btnJouer.Location.X , btnJouer.Location.Y - btnDeck.Height - 20);
+            btnQuitter.Location = new Point(btnJouer.Location.X , btnJouer.Location.Y + btnJouer.Height + 20);
         }
 
         // Affiche le plateau (Temporaire)
@@ -39,6 +33,11 @@ namespace Pierre_de_Foyer
             this.Close();
         }
 
+        private void btnQuitter_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+		}
+		
         private void btnDeck_Click(object sender, EventArgs e)
         {
             Form deck = new Deck();

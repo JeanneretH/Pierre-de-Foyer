@@ -22,28 +22,31 @@ namespace Pierre_de_Foyer
         Classes.Hero hero = new Classes.Hero();
         Classes.Hero heroAdverse = new Classes.Hero();
         List<Carte> MainHero = new List<Carte>();
-        List<Carte> MainHeroAdverce = new List<Carte>();
+        List<Carte> MainHeroAdverse = new List<Carte>();
         bool bTour = true, bDejaUtilise = false;
 
-        //déclaration de la liste
+        //déclaration des deck
         List<Carte> DeckHero = new List<Carte>();
+        List<Carte> DeckHeroAdverse = new List<Carte>();
 
         private void Plateau_Load(object sender, EventArgs e)
         {
             //Ajout de 20 Mannequin
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < 30; i++)
             {
                 Serviteur Mannequin = new Serviteur(1, 1, "Charge, provocation, râle d'agonie, cri de guerre invoque un autre mannequin.", "Je savais pas quoi mettre", "Mannequin crash test", Properties.Resources.CarteMannequinCrashTest_Temporaire, 1, 1, true, true);
 
                 DeckHero.Add(Mannequin);
+                //DeckHeroAdverse.Add(Mannequin);
             }
 
             //ajout de 10 Huit
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 30; i++)
             {
                 Serviteur Huit = new Serviteur(1, 8, "Son attaque ne change jamais.", "Je savais pas quoi mettre", "Huit", Properties.Resources.CarteHuit_Temporaire, 8, 8, false, false);
 
-                DeckHero.Add(Huit);
+                //DeckHero.Add(Huit);
+                DeckHeroAdverse.Add(Huit);
             }
 
             //Image des objet (Temporaire)
@@ -51,8 +54,6 @@ namespace Pierre_de_Foyer
             pbxHeroAdverse.BackColor = Color.Red;
             pbxPouvoirHero.BackColor = Color.Yellow;
             pbxPouvoirHeroAdverse.BackColor = Color.Yellow;
-            pbxDeck.BackColor = Color.Blue;
-            pbxDeckAdverse.BackColor = Color.Blue;
 
             //Placement des objets
             pbxHero.Location = new Point(this.Width / 2 - pbxHero.Width / 2, this.Height - pbxHeroAdverse.Height);
@@ -65,18 +66,16 @@ namespace Pierre_de_Foyer
             for (int i = 0; i < 4; i++)
             {
                 MainHero.Add(hero.PiocherCartes(DeckHero));
+                lblDeckHero.Text = "Cartes restante :" + Convert.ToString(DeckHero.Count);
             }
+            CacherMain(MainHero, "joueur");
 
             for (int i = 0; i < 4; i++)
             {
-                MainHeroAdverce.Add(hero.PiocherCartes(DeckHero));
+                MainHeroAdverse.Add(hero.PiocherCartes(DeckHeroAdverse));
+                lblDeckHeroAdverse.Text = "Cartes restante :" + Convert.ToString(DeckHeroAdverse.Count);
             }
-
-            //Affichage de la main (Temporaire)
-            pbxDeck.Location = new Point(this.Width / 4 * 3, 0);
-            pbxDeck.Top = this.Height - pbxDeck.Height;
-            pbxDeckAdverse.Location = new Point(this.Width / 4, 0);
-
+            CacherMain(MainHeroAdverse, "adversaire");
             
         }
 
@@ -110,14 +109,27 @@ namespace Pierre_de_Foyer
         {
             if(bTour == true)
             {
-                heroAdverse.PiocherCartes(DeckHero);
+                if (MainHeroAdverse.Count <= 7)
+                {
+                    MainHeroAdverse.Add(hero.PiocherCartes(DeckHeroAdverse));
+                    lblDeckHeroAdverse.Text = "Cartes restante :" + Convert.ToString(DeckHeroAdverse.Count);
+                }
                 bTour = false;
+                CacherMain(MainHero, "joueur");
+                CacherMain(MainHeroAdverse, "adversaire");
             }
             else
             {
-                hero.PiocherCartes(DeckHero);
+                if (MainHero.Count <= 7)
+                {
+                    MainHero.Add(hero.PiocherCartes(DeckHero));
+                    lblDeckHero.Text = "Cartes restante :" + Convert.ToString(DeckHero.Count);
+                }
                 bTour = true;
+                CacherMain(MainHero, "joueur");
+                CacherMain(MainHeroAdverse, "adversaire");
             }
+
             bDejaUtilise = false;
         }
 
@@ -129,22 +141,6 @@ namespace Pierre_de_Foyer
             this.Close();
         }
 
-        private void pbxDeckAdverse_Click(object sender, EventArgs e)
-        {
-            if (bTour == false)
-            {
-                AfficheCarte(MainHeroAdverce);
-            }
-        }
-
-        private void pbxDeck_Click(object sender, EventArgs e)
-        {
-            if(bTour == true)
-            {
-                AfficheCarte(MainHero);
-            }
-        }
-
         private void AfficheCarte(List<Carte> main)
         {
             int iCompteur = 0;
@@ -153,13 +149,12 @@ namespace Pierre_de_Foyer
             {
                 foreach (Carte carte in main)
                 {
-                    PictureBox pbxCarte = new PictureBox();
-                    pbxCarte.Size = new Size(200, 250);
-                    pbxCarte.Location = new Point((5 + pbxCarte.Width) * iCompteur, (this.Height / 3) * 2 - pbxCarte.Height / 2);
-                    pbxCarte.Name = carte.strNom;
-                    pbxCarte.BackColor = Color.White;
-                    pbxCarte.Image = carte._imageCarte;
-                    Controls.Add(pbxCarte);
+                    carte.Size = new Size(200, 250);
+                    carte.Location = new Point((5 + carte.Width) * iCompteur, this.Height - carte.Height - 4);
+                    carte.Name = carte.strNom;
+                    carte.BackColor = Color.White;
+                    carte.Image = carte._imageCarte;   
+                    Controls.Add(carte);
                     iCompteur++;
                 }
             }
@@ -167,16 +162,59 @@ namespace Pierre_de_Foyer
             {
                 foreach (Carte carte in main)
                 {
-                    PictureBox pbxCarte = new PictureBox();
-                    pbxCarte.Size = new Size(200, 250);
-                    pbxCarte.Location = new Point((5 + pbxCarte.Width) * iCompteur, this.Height / 3 - pbxCarte.Height / 2);
-                    pbxCarte.Name = carte.strNom;
-                    pbxCarte.BackColor = Color.White;
-                    pbxCarte.Image = carte._imageCarte;
-                    Controls.Add(pbxCarte);
+                    carte.Size = new Size(200, 250);
+                    carte.Location = new Point((5 + carte.Width) * iCompteur, 4);
+                    carte.Name = carte.strNom;
+                    carte.BackColor = Color.White;
+                    carte.Image = carte._imageCarte;
+                    Controls.Add(carte);
                     iCompteur++;
                 }
             }
+        }
+
+        private void CacherMain(List<Carte> main, string hero)
+        {
+            int iCompteur = 0;
+
+            if (hero == "joueur")
+            {
+                foreach (Carte carte in main)
+                {
+                    carte.Size = new Size(200, 250);
+                    carte.Location = new Point((5 + carte.Width) * iCompteur, this.Height - carte.Height - 4);
+                    carte.Name = carte.strNom;
+                    carte.BackColor = Color.White;
+                    carte.Image = Properties.Resources.Dos_de_Carte_Hugo;
+                    carte.Click += new EventHandler(this.AfficheMain);
+                    Controls.Add(carte);
+                    iCompteur++;
+                }
+            }
+            if(hero == "adversaire")
+            {
+                foreach (Carte carte in main)
+                {
+                    carte.Size = new Size(200, 250);
+                    carte.Location = new Point((5 + carte.Width) * iCompteur, 4);
+                    carte.Name = carte.strNom;
+                    carte.BackColor = Color.White;
+                    carte.Image = Properties.Resources.Dos_de_Carte_Hugo;
+                    carte.Click += new EventHandler(this.AfficheMainAdverse);
+                    Controls.Add(carte);
+                    iCompteur++;
+                }
+            }
+        }
+
+        private void AfficheMain(object sender, EventArgs e)
+        {
+            AfficheCarte(MainHero);
+        }
+
+        private void AfficheMainAdverse(object sender, EventArgs e)
+        {
+            AfficheCarte(MainHeroAdverse);
         }
     }
 }

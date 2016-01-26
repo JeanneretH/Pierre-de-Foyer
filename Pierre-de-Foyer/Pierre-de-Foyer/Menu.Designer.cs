@@ -35,9 +35,10 @@
             // 
             // btnQuitter
             // 
-            this.btnQuitter.Location = new System.Drawing.Point(12, 82);
+            this.btnQuitter.Font = new System.Drawing.Font("Candara", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnQuitter.Location = new System.Drawing.Point(109, 192);
             this.btnQuitter.Name = "btnQuitter";
-            this.btnQuitter.Size = new System.Drawing.Size(201, 29);
+            this.btnQuitter.Size = new System.Drawing.Size(256, 53);
             this.btnQuitter.TabIndex = 0;
             this.btnQuitter.Text = "Quitter";
             this.btnQuitter.UseVisualStyleBackColor = true;
@@ -45,9 +46,10 @@
             // 
             // btnJouer
             // 
-            this.btnJouer.Location = new System.Drawing.Point(12, 47);
+            this.btnJouer.Font = new System.Drawing.Font("Candara", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnJouer.Location = new System.Drawing.Point(109, 133);
             this.btnJouer.Name = "btnJouer";
-            this.btnJouer.Size = new System.Drawing.Size(201, 29);
+            this.btnJouer.Size = new System.Drawing.Size(256, 53);
             this.btnJouer.TabIndex = 1;
             this.btnJouer.Text = "Jouer";
             this.btnJouer.UseVisualStyleBackColor = true;
@@ -55,9 +57,10 @@
             // 
             // btnDeck
             // 
-            this.btnDeck.Location = new System.Drawing.Point(12, 12);
+            this.btnDeck.Font = new System.Drawing.Font("Candara", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnDeck.Location = new System.Drawing.Point(109, 74);
             this.btnDeck.Name = "btnDeck";
-            this.btnDeck.Size = new System.Drawing.Size(201, 29);
+            this.btnDeck.Size = new System.Drawing.Size(256, 53);
             this.btnDeck.TabIndex = 2;
             this.btnDeck.Text = "Deck";
             this.btnDeck.UseVisualStyleBackColor = true;
@@ -67,7 +70,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(361, 263);
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ClientSize = new System.Drawing.Size(507, 378);
             this.Controls.Add(this.btnDeck);
             this.Controls.Add(this.btnJouer);
             this.Controls.Add(this.btnQuitter);

@@ -13,15 +13,15 @@ namespace Pierre_de_Foyer.Classes
 {
     class Bdd
     {
-        private MySqlConnection connexion;
+        /* private MySqlConnection connexion;
 
-        /// <summary>
-        /// Constructeur par défaut
-        /// </summary>
-        public Bdd()
-        {
-            InitConnexion();
-        }
+         /// <summary>
+         /// Constructeur par défaut
+         /// </summary>
+         public Bdd()
+         {
+             InitConnexion();
+         }
 
         /// <summary>
         /// Méthode pour initialiser la connexion avec la BDD

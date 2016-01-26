@@ -83,10 +83,18 @@ namespace Pierre_de_Foyer.Classes
         /// <returns>La carte pioché est retourné</returns>
         public Carte PiocherCartes(List<Carte> deck)
         {
-            Carte _cartePioche = deck[_random.Next(0, deck.Count)];//permet de tirer une carte Random dans le deck
-            deck.Remove(_cartePioche);
-
-            return _cartePioche;
+            if (deck.Count > 0)
+            {
+                Carte _cartePioche = deck[_random.Next(0, deck.Count)];//permet de tirer une carte Random dans le deck
+                deck.Remove(_cartePioche);
+                return _cartePioche;
+            }
+            else
+            {
+                //Le joueur subira de la fatigue
+                MessageBox.Show("Le Joueur subit de la fatigue !");
+                return null;
+            }
         }
     }
 }
