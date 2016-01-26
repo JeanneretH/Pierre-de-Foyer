@@ -63,20 +63,22 @@ namespace Pierre_de_Foyer
             btnPasser.Location = new Point(this.Width - btnPasser.Width, this.Height / 2 - btnPasser.Height / 2);
             btnRetour.Location = new Point(this.Width - btnRetour.Width, 0);
 
+            //Fais piocher trois cartes du deck du heros et les places dans sa main
             for (int i = 0; i < 4; i++)
             {
                 MainHero.Add(hero.PiocherCartes(DeckHero));
                 lblDeckHero.Text = "Cartes restante :" + Convert.ToString(DeckHero.Count);
             }
-            CacherMain(MainHero, "joueur");
+            CacherMain(MainHero, "joueur"); //Seul le dos de carte s'affiche
 
+            //Fais piocher trois cartes du deck de l'adversaire et les places dans sa main
             for (int i = 0; i < 4; i++)
             {
                 MainHeroAdverse.Add(hero.PiocherCartes(DeckHeroAdverse));
                 lblDeckHeroAdverse.Text = "Cartes restante :" + Convert.ToString(DeckHeroAdverse.Count);
             }
-            CacherMain(MainHeroAdverse, "adversaire");
-            
+            CacherMain(MainHeroAdverse, "adversaire"); //Seul le dos de carte s'affiche
+
         }
 
         private void Plateau_Paint(object sender, PaintEventArgs e)
@@ -98,7 +100,7 @@ namespace Pierre_de_Foyer
         // Appelle cette fonction lorsque le joueur adverse utilise sont pouvoir heroique
         private void pbxPouvoirHeroAdverse_Click(object sender, EventArgs e)
         {
-            if(bTour == false && bDejaUtilise == false)
+            if (bTour == false && bDejaUtilise == false)
             {
                 bDejaUtilise = true;
             }
@@ -107,12 +109,13 @@ namespace Pierre_de_Foyer
         // Appelle cette fonction lorsque le joueur passe sont tour
         private void btnPasser_Click(object sender, EventArgs e)
         {
-            if(bTour == true)
+            if (bTour == true) //Vérifie à qui s'est le tour
             {
+                //Le heros ne peut avoir qu'un certain nombre de carte dans sa main
                 if (MainHeroAdverse.Count <= 7)
                 {
-                    MainHeroAdverse.Add(hero.PiocherCartes(DeckHeroAdverse));
-                    lblDeckHeroAdverse.Text = "Cartes restante :" + Convert.ToString(DeckHeroAdverse.Count);
+                    MainHeroAdverse.Add(hero.PiocherCartes(DeckHeroAdverse)); //pioche une carte au debut du tour
+                    lblDeckHeroAdverse.Text = "Cartes restante :" + Convert.ToString(DeckHeroAdverse.Count); //Affiche la quantité de carte qui reste dans le deck
                 }
                 bTour = false;
                 CacherMain(MainHero, "joueur");
@@ -120,6 +123,7 @@ namespace Pierre_de_Foyer
             }
             else
             {
+                //Le heros ne peut avoir qu'un certain nombre de carte dans sa main
                 if (MainHero.Count <= 7)
                 {
                     MainHero.Add(hero.PiocherCartes(DeckHero));
@@ -141,25 +145,31 @@ namespace Pierre_de_Foyer
             this.Close();
         }
 
+        /// <summary>
+        /// Fait apparaitre l'interface des cartes dans la main
+        /// </summary>
+        /// <param name="main">La liste de carte dans la main qu'il faut afficher</param>
         private void AfficheCarte(List<Carte> main)
         {
             int iCompteur = 0;
 
             if (bTour)
             {
+                //Matérialise chaque carte de la liste du heros
                 foreach (Carte carte in main)
                 {
                     carte.Size = new Size(200, 250);
                     carte.Location = new Point((5 + carte.Width) * iCompteur, this.Height - carte.Height - 4);
                     carte.Name = carte.strNom;
                     carte.BackColor = Color.White;
-                    carte.Image = carte._imageCarte;   
+                    carte.Image = carte._imageCarte;
                     Controls.Add(carte);
                     iCompteur++;
                 }
             }
             else
             {
+                //Matérialise chaque carte de la liste de l'adversaire
                 foreach (Carte carte in main)
                 {
                     carte.Size = new Size(200, 250);
@@ -173,6 +183,11 @@ namespace Pierre_de_Foyer
             }
         }
 
+        /// <summary>
+        /// Cache toute les cartes en affichant le dos de la carte
+        /// </summary>
+        /// <param name="main">Précisé la main qu'il faut cacher</param>
+        /// <param name="hero">Précisé à qui appartient la main</param>
         private void CacherMain(List<Carte> main, string hero)
         {
             int iCompteur = 0;
@@ -191,7 +206,7 @@ namespace Pierre_de_Foyer
                     iCompteur++;
                 }
             }
-            if(hero == "adversaire")
+            if (hero == "adversaire")
             {
                 foreach (Carte carte in main)
                 {
@@ -207,14 +222,26 @@ namespace Pierre_de_Foyer
             }
         }
 
+        /// <summary>
+        /// Appele la fonction qui affiche la main du hero lorsque l'on clique dessus
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AfficheMain(object sender, EventArgs e)
         {
-            AfficheCarte(MainHero);
+            if (bTour)
+                AfficheCarte(MainHero);
         }
 
+        /// <summary>
+        /// Appele la fonction qui affiche la main de l'adversaire lorsque l'on clique dessus
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AfficheMainAdverse(object sender, EventArgs e)
         {
-            AfficheCarte(MainHeroAdverse);
+            if (!bTour)
+                AfficheCarte(MainHeroAdverse);
         }
     }
 }

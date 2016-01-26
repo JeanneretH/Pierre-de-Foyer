@@ -21,7 +21,7 @@ namespace Pierre_de_Foyer
         private void Deck_Load(object sender, EventArgs e)
         {
             Bdd bdd = new Bdd();
-            List<Serviteur> serviteurs = bdd.LoadServiteurs();
+            /*List<Serviteur> serviteurs = bdd.LoadServiteurs();
             List<Sort> sorts = bdd.LoadSorts();
             List<Arme> armes = bdd.LoadArmes();
 
@@ -43,7 +43,7 @@ namespace Pierre_de_Foyer
 
                 Controls.Add(label);
                 label.Location = new Point(iX, iY);
-            }
+            }*/
         }
     }
 }
