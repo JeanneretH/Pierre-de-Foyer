@@ -34,7 +34,7 @@ namespace Pierre_de_Foyer
             //Ajout de 20 Mannequin
             for (int i = 0; i < 30; i++)
             {
-                Serviteur Mannequin = new Serviteur(1, 1, "Charge, provocation, râle d'agonie, cri de guerre invoque un autre mannequin.", "Je savais pas quoi mettre", "Mannequin crash test", true, Properties.Resources.CarteMannequinCrashTest_Temporaire, 1, 1, true, true, true);
+                Serviteur Mannequin = new Serviteur(1, 1, "Charge, provocation, râle d'agonie, cri de guerre invoque un autre mannequin.", "Je savais pas quoi mettre", "Mannequin crash test", Properties.Resources.CarteMannequinCrashTest_Temporaire, 1, 1, true, true);
 
                 DeckHero.Add(Mannequin);
                 //DeckHeroAdverse.Add(Mannequin);
@@ -43,7 +43,7 @@ namespace Pierre_de_Foyer
             //ajout de 10 Huit
             for (int i = 0; i < 30; i++)
             {
-                Serviteur Huit = new Serviteur(1, 8, "Son attaque ne change jamais.", "Je savais pas quoi mettre", "Huit", true, Properties.Resources.CarteHuit_Temporaire, 8, 8, true, false, false);
+                Serviteur Huit = new Serviteur(1, 8, "Son attaque ne change jamais.", "Je savais pas quoi mettre", "Huit", Properties.Resources.CarteHuit_Temporaire, 8, 8, false, false);
 
                 //DeckHero.Add(Huit);
                 DeckHeroAdverse.Add(Huit);
@@ -84,6 +84,8 @@ namespace Pierre_de_Foyer
             pbxDeck.Location = new Point(this.Width / 4 * 3, 0);
             pbxDeck.Top = this.Height - pbxDeck.Height;
             pbxDeckAdverse.Location = new Point(this.Width / 4, 0);
+
+            
         }
 
         private void Plateau_Paint(object sender, PaintEventArgs e)
