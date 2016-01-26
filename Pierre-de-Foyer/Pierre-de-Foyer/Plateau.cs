@@ -22,28 +22,31 @@ namespace Pierre_de_Foyer
         Classes.Hero hero = new Classes.Hero();
         Classes.Hero heroAdverse = new Classes.Hero();
         List<Carte> MainHero = new List<Carte>();
-        List<Carte> MainHeroAdverce = new List<Carte>();
+        List<Carte> MainHeroAdverse = new List<Carte>();
         bool bTour = true, bDejaUtilise = false;
 
-        //déclaration de la liste
+        //déclaration des deck
         List<Carte> DeckHero = new List<Carte>();
+        List<Carte> DeckHeroAdverse = new List<Carte>();
 
         private void Plateau_Load(object sender, EventArgs e)
         {
             //Ajout de 20 Mannequin
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < 30; i++)
             {
                 Serviteur Mannequin = new Serviteur(1, 1, "Charge, provocation, râle d'agonie, cri de guerre invoque un autre mannequin.", "Je savais pas quoi mettre", "Mannequin crash test", Properties.Resources.CarteMannequinCrashTest_Temporaire, 1, 1, true, true);
 
                 DeckHero.Add(Mannequin);
+                //DeckHeroAdverse.Add(Mannequin);
             }
 
             //ajout de 10 Huit
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 30; i++)
             {
                 Serviteur Huit = new Serviteur(1, 8, "Son attaque ne change jamais.", "Je savais pas quoi mettre", "Huit", Properties.Resources.CarteHuit_Temporaire, 8, 8, false, false);
 
-                DeckHero.Add(Huit);
+                //DeckHero.Add(Huit);
+                DeckHeroAdverse.Add(Huit);
             }
 
 
@@ -66,14 +69,16 @@ namespace Pierre_de_Foyer
             for (int i = 0; i < 4; i++)
             {
                 MainHero.Add(hero.PiocherCartes(DeckHero));
+                lblDeckHero.Text = "Cartes restante :" + Convert.ToString(DeckHero.Count);
             }
             CacherMain(MainHero, "joueur");
 
             for (int i = 0; i < 4; i++)
             {
-                MainHeroAdverce.Add(hero.PiocherCartes(DeckHero));
+                MainHeroAdverse.Add(hero.PiocherCartes(DeckHeroAdverse));
+                lblDeckHeroAdverse.Text = "Cartes restante :" + Convert.ToString(DeckHeroAdverse.Count);
             }
-            CacherMain(MainHeroAdverce, "adversaire");
+            CacherMain(MainHeroAdverse, "adversaire");
 
             //Affichage de la main (Temporaire)
             pbxDeck.Location = new Point(this.Width / 4 * 3, 0);
@@ -113,15 +118,25 @@ namespace Pierre_de_Foyer
         {
             if(bTour == true)
             {
-                heroAdverse.PiocherCartes(DeckHero);
+                if (MainHeroAdverse.Count <= 7)
+                {
+                    MainHeroAdverse.Add(hero.PiocherCartes(DeckHeroAdverse));
+                    lblDeckHeroAdverse.Text = "Cartes restante :" + Convert.ToString(DeckHeroAdverse.Count);
+                }
                 bTour = false;
                 CacherMain(MainHero, "joueur");
+                CacherMain(MainHeroAdverse, "adversaire");
             }
             else
             {
-                hero.PiocherCartes(DeckHero);
+                if (MainHero.Count <= 7)
+                {
+                    MainHero.Add(hero.PiocherCartes(DeckHero));
+                    lblDeckHero.Text = "Cartes restante :" + Convert.ToString(DeckHero.Count);
+                }
                 bTour = true;
-                CacherMain(MainHeroAdverce, "joueur");
+                CacherMain(MainHero, "joueur");
+                CacherMain(MainHeroAdverse, "adversaire");
             }
 
             bDejaUtilise = false;
@@ -139,7 +154,7 @@ namespace Pierre_de_Foyer
         {
             if (bTour == false)
             {
-                AfficheCarte(MainHeroAdverce);
+                AfficheCarte(MainHeroAdverse);
             }
         }
 
