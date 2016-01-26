@@ -108,7 +108,6 @@
             this.pbxDeck.Size = new System.Drawing.Size(137, 132);
             this.pbxDeck.TabIndex = 6;
             this.pbxDeck.TabStop = false;
-            this.pbxDeck.Click += new System.EventHandler(this.pbxDeck_Click);
             // 
             // pbxDeckAdverse
             // 
@@ -117,7 +116,6 @@
             this.pbxDeckAdverse.Size = new System.Drawing.Size(137, 132);
             this.pbxDeckAdverse.TabIndex = 7;
             this.pbxDeckAdverse.TabStop = false;
-            this.pbxDeckAdverse.Click += new System.EventHandler(this.pbxDeckAdverse_Click);
             // 
             // lblDeckHeroAdverse
             // 
