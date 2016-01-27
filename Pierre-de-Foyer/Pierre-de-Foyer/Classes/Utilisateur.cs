@@ -30,7 +30,7 @@ namespace Pierre_de_Foyer.Classes
                             Serviteur Card = new Serviteur(1, 1, "Salut c'est lama", "Je savais pas quoi mettre", "Lamacorne", Properties.Resources.Lamacorne_Temporaire, 1, 1, true, true);
                             DefaultDeck.Add(Card);
                         }
-                        HeroUtilisateur = new Hero("Yohann", 30, 0, null, DefaultDeck);
+                        HeroUtilisateur = new Hero("Yohann", 30, 0, null, DefaultDeck, null);
                     }
                     break;
                 case "Sacha":
@@ -40,7 +40,7 @@ namespace Pierre_de_Foyer.Classes
                             Serviteur Card = new Serviteur(1, 1, "Salut c'est lama", "Je savais pas quoi mettre", "Lamacorne", Properties.Resources.Lamacorne_Temporaire, 1, 1, true, true);
                             DefaultDeck.Add(Card);
                         }
-                        HeroUtilisateur = new Hero("Sacha", 30, 0, null, DefaultDeck);
+                        HeroUtilisateur = new Hero("Sacha", 30, 0, null, DefaultDeck, null);
                     }
                     break;
                 case "Vincent":
@@ -50,7 +50,7 @@ namespace Pierre_de_Foyer.Classes
                             Serviteur Card = new Serviteur(1, 1, "Salut c'est lama", "Je savais pas quoi mettre", "Lamacorne", Properties.Resources.Lamacorne_Temporaire, 1, 1, true, true);
                             DefaultDeck.Add(Card);
                         }
-                        HeroUtilisateur = new Hero("Vincent", 30, 0, null, DefaultDeck);
+                        HeroUtilisateur = new Hero("Vincent", 30, 0, null, DefaultDeck, null);
                     }
                     break;
                 case "Hugo":
@@ -60,7 +60,7 @@ namespace Pierre_de_Foyer.Classes
                             Serviteur Card = new Serviteur(1, 1, "Salut c'est lama", "Je savais pas quoi mettre", "Lamacorne", Properties.Resources.Lamacorne_Temporaire, 1, 1, true, true);
                             DefaultDeck.Add(Card);
                         }
-                        HeroUtilisateur = new Hero("Hugo", 30, 0, null, DefaultDeck);
+                        HeroUtilisateur = new Hero("Hugo", 30, 0, null, DefaultDeck, null);
                     }
                     break;
                 case "Janis":
@@ -70,7 +70,7 @@ namespace Pierre_de_Foyer.Classes
                             Serviteur Card = new Serviteur(1, 1, "Salut c'est lama", "Je savais pas quoi mettre", "Lamacorne", Properties.Resources.Lamacorne_Temporaire, 1, 1, true, true);
                             DefaultDeck.Add(Card);
                         }
-                        HeroUtilisateur = new Hero("Janis", 30, 0, null, DefaultDeck);
+                        HeroUtilisateur = new Hero("Janis", 30, 0, null, DefaultDeck, null);
                     }
                     break;
                 case "Romain":
@@ -80,7 +80,7 @@ namespace Pierre_de_Foyer.Classes
                             Serviteur Card = new Serviteur(1, 1, "Salut c'est lama", "Je savais pas quoi mettre", "Lamacorne", Properties.Resources.Lamacorne_Temporaire, 1, 1, true, true);
                             DefaultDeck.Add(Card);
                         }
-                        HeroUtilisateur = new Hero("Romain", 30, 0, null, DefaultDeck);
+                        HeroUtilisateur = new Hero("Romain", 30, 0, null, DefaultDeck, null);
                     }
                     break;
                 default:
@@ -90,7 +90,7 @@ namespace Pierre_de_Foyer.Classes
                             Serviteur Card = new Serviteur(1, 1, "Salut c'est lama", "Je savais pas quoi mettre", "Lamacorne", Properties.Resources.Lamacorne_Temporaire, 1, 1, true, true);
                             DefaultDeck.Add(Card);
                         }
-                        HeroUtilisateur = new Hero("Default", 30, 0, null, DefaultDeck);
+                        HeroUtilisateur = new Hero("Default", 30, 0, null, DefaultDeck, null);
                     }
                     break;
             }

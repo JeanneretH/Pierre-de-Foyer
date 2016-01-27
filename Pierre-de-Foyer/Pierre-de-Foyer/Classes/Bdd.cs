@@ -102,36 +102,25 @@ namespace Pierre_de_Foyer.Classes
         /// <summary>
         /// methode test
         /// </summary>
-        /*public Image Test()
+        public PictureBox Test()
         {
             connexion.Open();// Ouverture de la connexion SQL
-            Image img = new Image();
 
-            MySqlCommand Commande = new MySqlCommand("SELECT * FROM Arme", connexion);
-            MySqlDataReader SDR = Commande.ExecuteReader();
+            PictureBox pbxTest = new PictureBox();
 
-            while (SDR.Read())
-            {
-                img = ByteArrayToImage(GetBytes(Convert.ToString(SDR["Image"])));
-            }
+            MySqlCommand Commande = new MySqlCommand("SELECT * FROM Serviteur", connexion);
+            MySqlDataAdapter Da = new MySqlDataAdapter(Commande);
+            DataTable Dt = new DataTable();
 
-            return img;
+            Da.Fill(Dt);
+            byte[] img = (byte[])Dt.Rows[0][9];
+            MemoryStream Ms = new MemoryStream(img);
+
+            pbxTest.Image = Image.FromStream(Ms);
+            Da.Dispose();
             connexion.Close();
-        }*/
 
-        public static Image ByteArrayToImage(byte[] byteArrayIn)
-        {
-            var ms = new MemoryStream(byteArrayIn);
-            Image returnImage = Image.FromStream(ms);
-            return returnImage;
+            return pbxTest;
         }
-
-        static byte[] GetBytes(string str)
-        {
-            byte[] bytes = new byte[str.Length * sizeof(char)];
-            System.Buffer.BlockCopy(str.ToCharArray(), 0, bytes, 0, bytes.Length);
-            return bytes;
-        }
-
     }
 }
