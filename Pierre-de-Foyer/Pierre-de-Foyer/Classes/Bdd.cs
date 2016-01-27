@@ -8,6 +8,7 @@ using System.Text;
 using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 using MySql.Data.MySqlClient;
 
 namespace Pierre_de_Foyer.Classes
@@ -101,16 +102,25 @@ namespace Pierre_de_Foyer.Classes
         /// <summary>
         /// methode test
         /// </summary>
-        public void Test()
+        public PictureBox Test()
         {
             connexion.Open();// Ouverture de la connexion SQL
 
-            MySqlCommand Commande = new MySqlCommand("SELECT * FROM Arme", connexion);
-            MySqlDataReader SDR = Commande.ExecuteReader();
+            PictureBox pbxTest = new PictureBox();
 
-            datagridv
+            MySqlCommand Commande = new MySqlCommand("SELECT * FROM Serviteur", connexion);
+            MySqlDataAdapter Da = new MySqlDataAdapter(Commande);
+            DataTable Dt = new DataTable();
 
+            Da.Fill(Dt);
+            byte[] img = (byte[])Dt.Rows[0][9];
+            MemoryStream Ms = new MemoryStream(img);
+
+            pbxTest.Image = Image.FromStream(Ms);
+            Da.Dispose();
             connexion.Close();
+
+            return pbxTest;
         }
     }
 }
