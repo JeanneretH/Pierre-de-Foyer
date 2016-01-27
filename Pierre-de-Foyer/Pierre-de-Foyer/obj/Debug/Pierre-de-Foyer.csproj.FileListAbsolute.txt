@@ -101,6 +101,7 @@ C:\Temp\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\bin\Debug\MySql.Data.Entit
 C:\Temp\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\bin\Debug\MySql.Web.dll
 C:\Temp\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\obj\Debug\Pierre_de_Foyer.Inscription.resources
 C:\Temp\PierreDeFoyer\Pierre-de-Foyer\Pierre-de-Foyer\obj\Debug\Pierre_de_Foyer.Deck.resources
+<<<<<<< HEAD
 C:\Users\Mordecai\Desktop\Pierre-de-foyer\Pierre-de-Foyer\Pierre-de-Foyer\bin\Debug\Pierre-de-Foyer.exe.config
 C:\Users\Mordecai\Desktop\Pierre-de-foyer\Pierre-de-Foyer\Pierre-de-Foyer\obj\Debug\Pierre-de-Foyer.exe
 C:\Users\Mordecai\Desktop\Pierre-de-foyer\Pierre-de-Foyer\Pierre-de-Foyer\obj\Debug\Pierre-de-Foyer.pdb
@@ -114,3 +115,9 @@ C:\Users\Mordecai\Desktop\Pierre-de-foyer\Pierre-de-Foyer\Pierre-de-Foyer\obj\De
 C:\Users\Mordecai\Desktop\Pierre-de-foyer\Pierre-de-Foyer\Pierre-de-Foyer\obj\Debug\Pierre-de-Foyer.csproj.GenerateResource.Cache
 C:\Users\Mordecai\Desktop\Pierre-de-foyer\Pierre-de-Foyer\Pierre-de-Foyer\bin\Debug\Pierre-de-Foyer.exe
 C:\Users\Mordecai\Desktop\Pierre-de-foyer\Pierre-de-Foyer\Pierre-de-Foyer\bin\Debug\Pierre-de-Foyer.pdb
+=======
+E:\Documents\GitHub\Pierre-de-Foyer\Pierre-de-Foyer\Pierre-de-Foyer\obj\Debug\Pierre_de_Foyer.Deck.resources
+E:\Documents\GitHub\Pierre-de-Foyer\Pierre-de-Foyer\Pierre-de-Foyer\bin\Debug\MySql.Data.dll
+E:\Documents\GitHub\Pierre-de-Foyer\Pierre-de-Foyer\Pierre-de-Foyer\bin\Debug\MySql.Data.Entity.dll
+E:\Documents\GitHub\Pierre-de-Foyer\Pierre-de-Foyer\Pierre-de-Foyer\bin\Debug\MySql.Web.dll
+>>>>>>> upstream/master

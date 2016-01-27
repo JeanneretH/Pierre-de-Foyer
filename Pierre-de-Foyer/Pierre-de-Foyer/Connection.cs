@@ -37,6 +37,7 @@ namespace Pierre_de_Foyer
         {
             if(VerifieIdentifiant())
             {
+                Classes.Utilisateur utilisateurLocal = new Classes.Utilisateur(tbxUsername.Text);
                 Form menu = new Menu();
                 menu.Show();
                 this.Visible = false;

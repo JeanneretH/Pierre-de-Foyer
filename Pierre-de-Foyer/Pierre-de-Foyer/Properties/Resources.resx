@@ -133,4 +133,7 @@
   <data name="Dos_de_Carte_Hugo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dos-de-Carte_Hugo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Lamacorne_Temporaire" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CarteLamacorne.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

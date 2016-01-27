@@ -5,15 +5,21 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+<<<<<<< HEAD
 //using MySql.Data.MySqlClient;
+=======
+using System.Configuration;
+using MySql.Data.MySqlClient;
+>>>>>>> upstream/master
 
 namespace Pierre_de_Foyer.Classes
 {
     class Bdd
     {
-        /* private MySqlConnection connexion;
+        private MySqlConnection connexion;
 
          /// <summary>
          /// Constructeur par défaut
@@ -89,12 +95,40 @@ namespace Pierre_de_Foyer.Classes
 
             while (SDR.Read())
             {
-                Arme arme = new Arme(Convert.ToInt32(SDR["Id"]), Convert.ToInt32(SDR["Mana"]), Convert.ToString(SDR["Description"]), Convert.ToString(SDR["Heros"]), Convert.ToString(SDR["Nom"]), Properties.Resources.AileDeMort, Convert.ToInt32(SDR["Durabilite"]), Convert.ToInt32(SDR["Attaque"]));
+                Arme arme = new Arme(Convert.ToInt32(SDR["Id"]), Convert.ToInt32(SDR["Mana"]), Convert.ToString(SDR["Description"]), Convert.ToString(SDR["Heros"]), Convert.ToString(SDR["Nom"]), null , Convert.ToInt32(SDR["Durabilite"]), Convert.ToInt32(SDR["Attaque"]));
                 armes.Add(arme);
             }
 
             connexion.Close();
             return armes;
+<<<<<<< HEAD
         }*/
+=======
+        }
+
+        /// <summary>
+        /// methode test
+        /// </summary>
+        public PictureBox Test()
+        {
+            connexion.Open();// Ouverture de la connexion SQL
+
+            PictureBox pbxTest = new PictureBox();
+
+            MySqlCommand Commande = new MySqlCommand("SELECT * FROM Serviteur", connexion);
+            MySqlDataAdapter Da = new MySqlDataAdapter(Commande);
+            DataTable Dt = new DataTable();
+
+            Da.Fill(Dt);
+            byte[] img = (byte[])Dt.Rows[0][9];
+            MemoryStream Ms = new MemoryStream(img);
+
+            pbxTest.Image = Image.FromStream(Ms);
+            Da.Dispose();
+            connexion.Close();
+
+            return pbxTest;
+        }
+>>>>>>> upstream/master
     }
 }
