@@ -8,17 +8,14 @@ using System.Text;
 using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-<<<<<<< HEAD
-//using MySql.Data.MySqlClient;
-=======
-using System.Configuration;
-using MySql.Data.MySqlClient;
->>>>>>> upstream/master
+/*using System.Configuration;
+using MySql.Data.MySqlClient;*/
 
 namespace Pierre_de_Foyer.Classes
 {
     class Bdd
     {
+        /*
         private MySqlConnection connexion;
 
          /// <summary>
@@ -101,9 +98,8 @@ namespace Pierre_de_Foyer.Classes
 
             connexion.Close();
             return armes;
-<<<<<<< HEAD
-        }*/
-=======
+
+        }
         }
 
         /// <summary>
@@ -128,7 +124,6 @@ namespace Pierre_de_Foyer.Classes
             connexion.Close();
 
             return pbxTest;
-        }
->>>>>>> upstream/master
+        }*/
     }
 }

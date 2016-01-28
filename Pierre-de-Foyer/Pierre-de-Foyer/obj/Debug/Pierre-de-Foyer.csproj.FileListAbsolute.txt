@@ -121,3 +121,6 @@ E:\Documents\GitHub\Pierre-de-Foyer\Pierre-de-Foyer\Pierre-de-Foyer\bin\Debug\My
 E:\Documents\GitHub\Pierre-de-Foyer\Pierre-de-Foyer\Pierre-de-Foyer\bin\Debug\MySql.Data.Entity.dll
 E:\Documents\GitHub\Pierre-de-Foyer\Pierre-de-Foyer\Pierre-de-Foyer\bin\Debug\MySql.Web.dll
 >>>>>>> upstream/master
+C:\Users\Mordecai\Desktop\Pierre-de-foyer\Pierre-de-Foyer\Pierre-de-Foyer\bin\Debug\MySql.Data.dll
+C:\Users\Mordecai\Desktop\Pierre-de-foyer\Pierre-de-Foyer\Pierre-de-Foyer\bin\Debug\MySql.Data.Entity.dll
+C:\Users\Mordecai\Desktop\Pierre-de-foyer\Pierre-de-Foyer\Pierre-de-Foyer\bin\Debug\MySql.Web.dll

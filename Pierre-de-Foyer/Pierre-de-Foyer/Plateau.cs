@@ -161,7 +161,7 @@ namespace Pierre_de_Foyer
                     carte.Size = new Size(200, 250);
                     carte.Location = new Point((5 + carte.Width) * iCompteur, this.Height - carte.Height - 4);
                     carte.Name = carte.strNom;
-                    carte.BackColor = Color.White;
+                    carte.BackColor = Color.Transparent;
                     carte.Image = carte._imageCarte;
                     Controls.Add(carte);
                     iCompteur++;
@@ -175,7 +175,7 @@ namespace Pierre_de_Foyer
                     carte.Size = new Size(200, 250);
                     carte.Location = new Point((5 + carte.Width) * iCompteur, 4);
                     carte.Name = carte.strNom;
-                    carte.BackColor = Color.White;
+                    carte.BackColor = Color.Transparent;
                     carte.Image = carte._imageCarte;
                     Controls.Add(carte);
                     iCompteur++;
@@ -199,7 +199,7 @@ namespace Pierre_de_Foyer
                     carte.Size = new Size(200, 250);
                     carte.Location = new Point((5 + carte.Width) * iCompteur, this.Height - carte.Height - 4);
                     carte.Name = carte.strNom;
-                    carte.BackColor = Color.White;
+                    carte.BackColor = Color.Transparent;
                     carte.Image = Properties.Resources.Dos_de_Carte_Hugo;
                     carte.Click += new EventHandler(this.AfficheMain);
                     Controls.Add(carte);
@@ -213,7 +213,7 @@ namespace Pierre_de_Foyer
                     carte.Size = new Size(200, 250);
                     carte.Location = new Point((5 + carte.Width) * iCompteur, 4);
                     carte.Name = carte.strNom;
-                    carte.BackColor = Color.White;
+                    carte.BackColor = Color.Transparent;
                     carte.Image = Properties.Resources.Dos_de_Carte_Hugo;
                     carte.Click += new EventHandler(this.AfficheMainAdverse);
                     Controls.Add(carte);
